@@ -1,4 +1,4 @@
-# Using Adobe Flex
+# Optimizing Performance for the Flash Platform
 
 An archive containing the contents of _Optimizing Performance for the Flash
 Platform_, by Adobe Systems Incorporated. The full text of this documentation
