@@ -15,6 +15,6 @@ In particular, see the sections called:
 
 - Best practices
 
-- How to profile the video player’s performance
+- How to profile the video player's performance
 
 - A reference video player implementation

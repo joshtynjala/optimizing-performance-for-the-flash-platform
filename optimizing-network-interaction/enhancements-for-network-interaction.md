@@ -38,7 +38,7 @@ sometimes fails if the offset is out of range, and in this case, a
 
 Note: The smart seeking feature requires Adobe® Flash® Media Server 3.5.3. Flash
 Player 10.1and AIR 2.5 introduce a new behavior, called smart seeking, which
-improves the user’s experience when playing streaming video. If the user seeks a
+improves the user's experience when playing streaming video. If the user seeks a
 destination inside the buffer bounds, the runtime reuses the buffer to offer
 instant seeking. In previous versions of the runtime, the buffer was not reused.
 For example, if a user was playing a video from a streaming server and the

@@ -1,7 +1,7 @@
 # Redraw regions
 
 ![](../img/tip_help.png) Always use the redraw regions option when building your
-project. To improve rendering, it’s important to use the redraw regions option
+project. To improve rendering, it's important to use the redraw regions option
 when building your project. Using this option allows you to see the regions that
 Flash Player is rendering and processing. You can enable this option by
 selecting Show Redraw Regions in the context menu of the debug version of Flash

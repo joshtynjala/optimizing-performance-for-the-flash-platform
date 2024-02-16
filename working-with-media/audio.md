@@ -4,7 +4,7 @@ Starting with Flash Player 9.0.115.0 and AIR 1.0, the runtime can play AAC files
 (AAC Main, AAC LC, and SBR). A simple optimization can be made by using AAC
 files instead of mp3 files. The AAC format offers better quality and smaller
 file size than the mp3 format at an equivalent bitrate. Reducing file size saves
-bandwidth, which is an important factor on mobile devices that don’t offer
+bandwidth, which is an important factor on mobile devices that don't offer
 high-speed Internet connections.
 
 ## Hardware Audio Decoding

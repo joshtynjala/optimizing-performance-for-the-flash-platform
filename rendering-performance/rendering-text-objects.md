@@ -55,11 +55,11 @@ function calls and get more performance improvements. A best practice is to use
 the int type for the `destX` and `destY` properties, so that you have
 fixed-point values. Using the int type allows you to get perfect pixel snapping
 without having to round values manually through slow methods like `Math.ceil()`
-or `Math.round()`. This code doesn’t round the coordinates to int, because by
+or `Math.round()`. This code doesn't round the coordinates to int, because by
 rounding the values constantly, the object does not move smoothly. The object
 can have jittery movements, because the coordinates are snapped to the nearest
 rounded integers on every frame. However, this technique can be useful when
-setting a final position for a display object. Don’t use the following code:
+setting a final position for a display object. Don't use the following code:
 
     // Do not use this code
     var destX:Number = Math.round ( stage.stageWidth / 2 );
@@ -154,7 +154,7 @@ A manual bitmap caching approach could have been used here. To simulate the
 BitmapData object, which does not force the runtime to regenerate the bitmap
 surface.
 
-This technique works well for content that doesn’t change over time. However, if
+This technique works well for content that doesn't change over time. However, if
 the content of the text field can change, consider using a different strategy.
 For example, imagine a text field that is continuously updated with a percentage
 representing how much of the application has loaded. If the text field, or its
@@ -196,7 +196,7 @@ The following code uses this approach:
 
 Using this option (Anti-Alias for Readability) for text in motion is not
 recommended. When scaling the text, this option causes the text tries to stay
-aligned, which produces a shifting effect. However, if the display object’s
+aligned, which produces a shifting effect. However, if the display object's
 content is constantly changing and you need scaled text, you can improve
 performance in mobile applications by setting the quality to `LOW`. When the
 motion finishes, switch the quality back to `HIGH`.

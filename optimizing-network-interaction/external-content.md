@@ -61,7 +61,7 @@ ActionScript class:
     }
 
 Getting the definition can be made easier by loading the class definitions in
-the loading SWF file’s application domain:
+the loading SWF file's application domain:
 
     // Create a Loader object
     var loader:Loader = new Loader();

@@ -1,8 +1,8 @@
 # Database file optimization
 
 ![](../img/tip_help.png) Avoid database schema changes. If possible, avoid
-changing the schema (table structure) of a database once you’ve added data into
-the database’s tables. Normally a database file is structured with the table
+changing the schema (table structure) of a database once you've added data into
+the database's tables. Normally a database file is structured with the table
 definitions at the start of the file. When you open a connection to a database,
 the runtime loads those definitions. When you add data to database tables, that
 data is added to the file after the table definition data. However, if you make

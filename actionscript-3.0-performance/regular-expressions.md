@@ -9,17 +9,17 @@ the `String.indexOf()` method or use a regular expression. However, when a
 String class method is available, it runs faster than the equivalent regular
 expression and does not require the creation of another object.
 
-![](../img/tip_help.png) Use a non-capturing group (“ `(?:xxxx)` ”) instead of a
-group (“ `(xxxx)` ”) in a regular expression to group elements without isolating
+![](../img/tip_help.png) Use a non-capturing group (" `(?:xxxx)` ") instead of a
+group (" `(xxxx)` ") in a regular expression to group elements without isolating
 the contents of the group in the result. Frequently in regular expressions of
 moderate complexity, you group parts of the expression. For example, in the
 following regular expression pattern the parentheses create a group around the
-text “ab.” Consequently, the “+” quantifier applies to the group rather than to
+text "ab." Consequently, the "+" quantifier applies to the group rather than to
 a single character:
 
     /(ab)+/
 
-By default, the contents of each group are “captured.” You can get the contents
+By default, the contents of each group are "captured." You can get the contents
 of each group in your pattern as part of the result of executing the regular
 expression. Capturing these group results takes longer and requires more memory
 because objects are created to contain the group results. As an alternative, you

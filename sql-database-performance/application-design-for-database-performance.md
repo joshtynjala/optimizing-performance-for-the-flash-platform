@@ -1,24 +1,24 @@
 # Application design for database performance
 
-![](../img/tip_help.png) Don’t change a SQLStatement object’s `text` property
+![](../img/tip_help.png) Don't change a SQLStatement object's `text` property
 after executing it. Instead, use one SQLStatement instance for each SQL
 statement and use statement parameters to provide different values. Before any
 SQL statement is executed, the runtime prepares (compiles) it to determine the
 steps that are performed internally to carry out the statement. When you call
-`SQLStatement.execute()` on a SQLStatement instance that hasn’t executed
+`SQLStatement.execute()` on a SQLStatement instance that hasn't executed
 previously, the statement is automatically prepared before it is executed. On
 subsequent calls to the `execute()` method, as long as the `SQLStatement.text`
-property hasn’t changed the statement is still prepared. Consequently, it
+property hasn't changed the statement is still prepared. Consequently, it
 executes faster.
 
 To gain the maximum benefit from reusing statements, if values change between
 statement executions, use statement parameters to customize your statement.
 (Statement parameters are specified using the `SQLStatement.parameters`
-associative array property.) Unlike changing the SQLStatement instance’s `text`
-property, if you change the values of statement parameters the runtime isn’t
+associative array property.) Unlike changing the SQLStatement instance's `text`
+property, if you change the values of statement parameters the runtime isn't
 required to prepare the statement again.
 
-When you’re reusing a SQLStatement instance, your application must store a
+When you're reusing a SQLStatement instance, your application must store a
 reference to the SQLStatement instance once it has been prepared. To keep a
 reference to the instance, declare the variable as a class-scope variable rather
 than a function-scope variable. One good way to make the SQLStatement a
@@ -31,12 +31,12 @@ in the application. At a minimum, you can simply define a variable containing
 the SQLStatement instance outside a function so that the instance persists in
 memory. For example, declare the SQLStatement instance as a member variable in
 an ActionScript class or as a non-function variable in a JavaScript file. You
-can then set the statement’s parameter values and call its `execute()` method
+can then set the statement's parameter values and call its `execute()` method
 when you want to actually run the query.
 
 ![](../img/tip_help.png) Use database indexes to improve execution speed for
 data comparing and sorting. When you create an index for a column, the database
-stores a copy of that column’s data. The copy is kept sorted in numeric or
+stores a copy of that column's data. The copy is kept sorted in numeric or
 alphabetical order. The sorting allows the database to quickly match values
 (such as when using the equality operator) and sort result data using the
 `ORDER BY` clause.
@@ -44,7 +44,7 @@ alphabetical order. The sorting allows the database to quickly match values
 Database indexes are kept continuously up-to-date, which causes data change
 operations (INSERT or UPDATE) on that table to be slightly slower. However, the
 increase in data retrieval speed can be significant. Because of this performance
-tradeoff, don’t simply index every column of every table. Instead, use a
+tradeoff, don't simply index every column of every table. Instead, use a
 strategy for defining your indexes. Use the following guidelines to plan your
 indexing strategy:
 
@@ -65,9 +65,9 @@ initial data and then execute other statements in the background:
 1.  Load the data that the application needs first.
 
 2.  When the initial startup operations of your application have completed, or
-    at another “idle” time in the application, execute other statements.
+    at another "idle" time in the application, execute other statements.
 
-For example, suppose your application doesn’t access the database at all to
+For example, suppose your application doesn't access the database at all to
 display its initial screen. In that case, wait until that screen displays before
 opening the database connection. Finally, create the SQLStatement instances and
 execute any that you can.
@@ -79,14 +79,14 @@ data is loaded and displayed, create SQLStatement instances for other database
 operations and if possible execute other statements that are needed later.
 
 In practice, if you are reusing SQLStatement instances, the additional time
-required to prepare the statement is only a one-time cost. It probably doesn’t
+required to prepare the statement is only a one-time cost. It probably doesn't
 have a large impact on overall performance.
 
 ![](../img/tip_help.png) Group multiple SQL data change operations in a
-transaction. Suppose you’re executing many SQL statements that involve adding or
+transaction. Suppose you're executing many SQL statements that involve adding or
 changing data ( `INSERT` or `UPDATE` statements). You can get a significant
 increase in performance by executing all the statements within an explicit
-transaction. If you don’t explicitly begin a transaction, each of the statements
+transaction. If you don't explicitly begin a transaction, each of the statements
 runs in its own automatically created transaction. After each transaction (each
 statement) finishes executing, the runtime writes the resulting data to the
 database file on the disk.
@@ -100,7 +100,7 @@ one time rather than once per SQL statement can improve performance
 significantly.
 
 ![](../img/tip_help.png) Process large `SELECT` query results in parts using the
-SQLStatement class’s `execute()` method (with `prefetch` parameter) and `next()`
+SQLStatement class's `execute()` method (with `prefetch` parameter) and `next()`
 method. Suppose you execute a SQL statement that retrieves a large result set.
 The application then processes each row of data in a loop. For example, it
 formats the data or creates objects from it. Processing that data can take a
@@ -110,7 +110,7 @@ non-responsive screen. As described in
 one solution is to divide up the work into chunks. The SQL database API makes
 dividing up data processing easy to do.
 
-The SQLStatement class’s `execute()` method has an optional `prefetch` parameter
+The SQLStatement class's `execute()` method has an optional `prefetch` parameter
 (the first parameter). If you provide a value, it specifies the maximum number
 of result rows that the database returns when the execution completes:
 
@@ -143,11 +143,11 @@ specify a maximum number of rows to return:
 
 You can continue calling the `next()` method until all the data loads. As shown
 in the previous listing, you can determine when the data has all loaded. Check
-the `complete` property of the SQLResult object that’s created each time the
+the `complete` property of the SQLResult object that's created each time the
 `execute()` or `next()` method finishes. Note: Use the `prefetch` parameter and
-the `next()` method to divide up the processing of result data. Don’t use this
-parameter and method to limit a query’s results to a portion of its result set.
-If you only want to retrieve a subset of rows in a statement’s result set, use
+the `next()` method to divide up the processing of result data. Don't use this
+parameter and method to limit a query's results to a portion of its result set.
+If you only want to retrieve a subset of rows in a statement's result set, use
 the `LIMIT` clause of the `SELECT` statement. If the result set is large, you
 can still use the `prefetch` parameter and `next()` method to divide up the
 processing of the results.
@@ -168,7 +168,7 @@ approach is not recommended for use on mobile devices.
 
 An additional concern is that the potential benefit from reusing SQLStatement
 objects can be lost because a SQLStatement object is linked to a single
-SQLConnection object. Consequently, the SQLStatement object can’t be reused if
+SQLConnection object. Consequently, the SQLStatement object can't be reused if
 its associated SQLConnection object is already in use.
 
 If you choose to use multiple SQLConnection objects connected to a single

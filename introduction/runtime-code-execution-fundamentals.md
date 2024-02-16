@@ -2,7 +2,7 @@
 
 One key to understanding how to improve application performance is to understand
 how the Flash Platform runtime executes code. The runtime operates in a loop
-with certain actions occurring each “frame.” A frame in this case is simply a
+with certain actions occurring each "frame." A frame in this case is simply a
 block of time determined by the frame rate specified for the application. The
 amount of time allotted to each frame directly corresponds to the frame rate.
 For example, if you specify a frame rate of 30 frames per second, the runtime
@@ -23,7 +23,7 @@ which potentially result in your code being called. In the first part of the
 first phase, runtime events arrive and are dispatched. These events can
 represent completion or progress of asynchronous operations, such as a response
 from loading data over a network. They also include events from user input. As
-events are dispatched, the runtime executes your code in listeners you’ve
+events are dispatched, the runtime executes your code in listeners you've
 registered. If no events occur, the runtime waits to complete this execution
 phase without performing any action. The runtime never speeds up the frame rate
 due to lack of activity. If events occur during other parts of the execution
@@ -47,10 +47,10 @@ available time in the frame, stretching its time allotment, and reducing the
 allotment available for rendering. In other cases, especially with complex
 visual content such as filters and blend modes, the rendering requires more than
 half the frame time. Because the actual time taken by the phases is flexible,
-the frame loop is commonly known as the “elastic racetrack.”
+the frame loop is commonly known as the "elastic racetrack."
 
 If the combined operations of the frame loop (code execution and rendering) take
-too long, the runtime isn’t able to maintain the frame rate. The frame expands,
+too long, the runtime isn't able to maintain the frame rate. The frame expands,
 taking longer than its allotted time, so there is a delay before the next frame
 is triggered. For example, if a frame loop takes longer than one-thirtieth of a
 second, the runtime is not able to update the screen at 30 frames per second.

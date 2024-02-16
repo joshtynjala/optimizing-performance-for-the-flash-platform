@@ -135,7 +135,7 @@ Flash Player 10.1 and AIR 2.5 optimize the use of memory by taking the same
 approach as described in the
 [Filters and dynamic bitmap unloading](../../conserving-memory/filters-and-dynamic-bitmap-unloading.md).
 If a cached display object is hidden or offscreen, its bitmap in memory is freed
-when unused for a while. Note: If the display object’s `opaqueBackground`
+when unused for a while. Note: If the display object's `opaqueBackground`
 property is set to a specific color, the runtime considers the display object to
 be opaque. When used with the `cacheAsBitmap` property, the runtime creates a
 non-transparent 32-bit bitmap in memory. The alpha channel is set to 0xFF, which

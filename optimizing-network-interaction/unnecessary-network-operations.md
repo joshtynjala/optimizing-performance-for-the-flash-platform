@@ -1,7 +1,7 @@
 # Unnecessary network operations
 
 ![](../img/tip_help.png) Cache assets locally after loading them, instead of
-loading them from the network each time they’re needed. If your application
+loading them from the network each time they're needed. If your application
 loads assets such as media or data, cache the assets by saving them to the local
 device. For assets that change infrequently, consider updating the cache at
 intervals. For example, your application could check for a new version of an

@@ -43,5 +43,5 @@ freed. The JPEG image quality is comparable to the general mipmapping technique.
 Note: Use mipmapping sparingly. Although it improves the quality of downscaled
 bitmaps, it has an impact on bandwidth, memory, and speed. In some cases, a
 better option can be to use a pre-scaled version of the bitmap from an external
-tool and import it into your application. Don’t start with large bitmaps if you
+tool and import it into your application. Don't start with large bitmaps if you
 only intend to scale them down.

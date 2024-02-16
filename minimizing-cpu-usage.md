@@ -79,7 +79,7 @@ after the page has been loaded, those instances will ignore the `hasPriority`
 flag. Any 1x1 pixel or 0x0 pixel content is started, preventing helper SWF files
 from being deferred if the webmaster fails to include the `hasPriority` flag.
 SWF files can still be started when clicked, however. This behavior is called
-“click to play.” The following diagrams show the effects of setting the
+"click to play." The following diagrams show the effects of setting the
 `hasPriority` parameter to different values:
 
 ![](./img/oc_haspriority_setting_false.png)
@@ -212,7 +212,7 @@ When the Show button is pressed, the movie clip is restarted, it listens to
 `Event.ENTER_FRAME` events again, and the keyboard correctly controls the movie
 clip. Note: If a display object is removed from the display list, setting its
 reference to `null` after removing it does not ensure that the object is frozen.
-If the garbage collector doesn’t run, the object continues to consume memory and
+If the garbage collector doesn't run, the object continues to consume memory and
 CPU processing, even though the object is no longer displayed. To make sure that
 the object consumes the least CPU processing possible, make sure that you
 completely freeze it when removing it from the display list. Starting with Flash
@@ -269,7 +269,7 @@ The following actions occur when the `unloadAndStop()` method is called:
 
 - Sounds are stopped.
 
-- Listeners registered to the SWF file’s main timeline are removed.
+- Listeners registered to the SWF file's main timeline are removed.
 
 - Timer objects are stopped.
 
@@ -362,7 +362,7 @@ ActionScript developers frequently use the `ENTER_FRAME` event approach. The
 which the function is called is related to the current frame rate. The frame
 rate is accessible through the `Stage.frameRate` property. However, in some
 cases, using a timer can be a better choice than using the `ENTER_FRAME` event.
-For example, if you don’t use animation, but would like your code called at
+For example, if you don't use animation, but would like your code called at
 specific intervals, using a timer can be a better choice.
 
 A timer can behave in a similar way to an `ENTER_FRAME` event, but an event can
@@ -411,7 +411,7 @@ single centralized `enterFrame` handler that executes all the code that is to
 run each frame. By centralizing this code, it is easier to manage all the code
 that is running frequently.
 
-Likewise, if you’re using Timer objects, there is overhead associated with
+Likewise, if you're using Timer objects, there is overhead associated with
 creating and dispatching events from multiple Timer objects. If you must trigger
 different operations at different intervals, here are some suggested
 alternatives:
@@ -424,7 +424,7 @@ alternatives:
   set to trigger every 2000 milliseconds.
 
 - Use a single Timer object, and have operations triggered at multiples of the
-  Timer object’s `delay` property interval.
+  Timer object's `delay` property interval.
 
   For example, suppose you have some operations that are expected to happen
   every 100 milliseconds, and others that you want to happen every 200
@@ -451,17 +451,17 @@ alternatives:
       offCycle = !offCycle;
       }
 
-![](./img/tip_help.png) Stop Timer objects when not in use. If a Timer object’s
+![](./img/tip_help.png) Stop Timer objects when not in use. If a Timer object's
 `timer` event handler only performs operations under certain conditions, call
-the Timer object’s `stop()` method when none of the conditions are true.
+the Timer object's `stop()` method when none of the conditions are true.
 
 ![](./img/tip_help.png) In `enterFrame` event or Timer handlers, minimize the
 number of changes to the appearance of display objects that cause the screen to
 be redrawn. Each frame, the rendering phase redraws the portion of the stage
-that has changed during that frame. If the redraw region is large, or if it’s
+that has changed during that frame. If the redraw region is large, or if it's
 small but contain a large quantity or complex display objects, the runtime needs
-more time for rendering. To test the amount of redrawing required, use the “show
-redraw regions” feature in the debug Flash Player or AIR.
+more time for rendering. To test the amount of redrawing required, use the "show
+redraw regions" feature in the debug Flash Player or AIR.
 
 For more information about improving performance for repeated actions, see the
 following article:

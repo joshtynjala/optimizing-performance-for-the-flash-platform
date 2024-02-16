@@ -19,8 +19,8 @@ NativeWindow constructor while creating the NativeWindow object:
     initOptions.transparent = false;
     var win:NativeWindow = new NativeWindow(initOptions);
 
-For a Flex Window component, make sure the component’s transparent property is
-set to false, the default, before calling the Window object’s `open()` method.
+For a Flex Window component, make sure the component's transparent property is
+set to false, the default, before calling the Window object's `open()` method.
 
     // Flex window component: spark.components.Window class
 
@@ -28,7 +28,7 @@ set to false, the default, before calling the Window object’s `open()` method.
     win.transparent = false;
     win.open();
 
-A transparent window potentially shows part of the user’s desktop or other
+A transparent window potentially shows part of the user's desktop or other
 application windows behind the application window. Consequently, the runtime
 uses more resources to render a transparent window. A rectangular
 non-transparent window, whether it uses operating system chrome or custom

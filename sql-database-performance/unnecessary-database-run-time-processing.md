@@ -2,7 +2,7 @@
 
 ![](../img/tip_help.png) Use a fully qualified table name (including database
 name) in your SQL statement. Always explicitly specify the database name along
-with each table name in a statement. (Use “main” if it’s the main database). For
+with each table name in a statement. (Use "main" if it's the main database). For
 example, the following code includes an explicit database name `main`:
 
     SELECT employeeId
@@ -37,7 +37,7 @@ Compare the preceding examples to the following ones. Avoid this style of code:
 Without explicit column names, the runtime has to do extra work to figure out
 the column names. If a `SELECT` statement uses a wildcard rather than explicit
 columns, it causes the runtime to retrieve extra data. This extra data requires
-extra processing and creates extra object instances that aren’t needed.
+extra processing and creates extra object instances that aren't needed.
 
 ![](../img/tip_help.png) Avoid joining the same table multiple times in a
 statement, unless you are comparing the table to itself. As SQL statements grow

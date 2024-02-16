@@ -53,11 +53,11 @@ PerformanceTest class can be downloaded at the following address:
 
 Flash Builder is shipped with a profiler that allows you to benchmark your code
 with a high level of detail. Note: Use the debugger version of Flash Player to
-access the profiler, or you’ll get an error message. The profiler can also be
+access the profiler, or you'll get an error message. The profiler can also be
 used with content produced in Adobe Flash Professional. To do that, load the
 compiled SWF file from an ActionScript or Flex project into Flash Builder, and
 you can run the profiler on it. For more information on the profiler, see
-“Profiling Flex applications” in
+"Profiling Flex applications" in
 [Using Flash Builder 4](https://web.archive.org/web/20150219140156/http://help.adobe.com/en_US/Flex/4.0/UsingFlashBuilder/index.html).
 
 ## FlexPMD

@@ -76,7 +76,7 @@ The following guidelines can make GPU rendering faster:
 - Limit the size of display objects.
 
 - Enable cacheAsBitMap and cacheAsBitmapMatrix for display objects whose
-  graphics aren’t updated frequently.
+  graphics aren't updated frequently.
 
 - Avoid using the ActionScript drawing API (the Graphics class) to create
   graphics. When possible, create those objects statically at authoring time

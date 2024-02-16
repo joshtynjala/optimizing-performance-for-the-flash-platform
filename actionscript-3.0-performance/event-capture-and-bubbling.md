@@ -8,7 +8,7 @@ handler on one object, instead of multiple objects, to improve performance.
 
 As an example, imagine creating a game in which the user must click apples as
 fast as possible to destroy them. The game removes each apple from the screen
-when it is clicked and adds points to the user’s score. To listen to the
+when it is clicked and adds points to the user's score. To listen to the
 `MouseEvent.CLICK` event dispatched by each apple, you could be tempted to write
 the following code:
 

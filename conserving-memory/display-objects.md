@@ -4,7 +4,7 @@
 includes a large set of display objects. One of the most simple optimization
 tips to limit memory usage is to use the appropriate type of display object. For
 simple shapes that are not interactive, use Shape objects. For interactive
-objects that don’t need a timeline, use Sprite objects. For animation that uses
+objects that don't need a timeline, use Sprite objects. For animation that uses
 a timeline, use MovieClip objects. Always choose the most efficient type of
 object for your application.
 

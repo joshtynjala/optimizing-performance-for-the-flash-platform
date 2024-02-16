@@ -64,7 +64,7 @@ technique:
 The SpritePool class creates a pool of new objects at the initialization of the
 application. The `getSprite()` method returns instances of these objects, and
 the `disposeSprite()` method releases them. The code allows the pool to grow
-when it has been consumed completely. It’s also possible to create a fixed-size
+when it has been consumed completely. It's also possible to create a fixed-size
 pool where new objects would not be allocated when the pool is exhausted. Try to
 avoid creating new objects in loops, if possible. For more information, see
 [Freeing memory](../freeing-memory.md). The following code uses the SpritePool
