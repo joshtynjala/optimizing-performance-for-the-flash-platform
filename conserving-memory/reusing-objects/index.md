@@ -1,6 +1,6 @@
 # Reusing objects
 
-![](../img/tip_help.png) Reuse objects, when possible, instead of recreating
+![](../../img/tip_help.png) Reuse objects, when possible, instead of recreating
 them. Another simple way to optimize memory is to reuse objects and avoid
 recreating them whenever possible. For example, in a loop, do not use the
 following code:
@@ -61,7 +61,7 @@ Note: When using positive values, casting the rounded value to int is much
 faster than using the `Math.floor()` method. The following image shows the
 result of the bitmap tiling:
 
-![](../img/oc_bitmaptiling_popup.png) Result of bitmap tiling
+![](../../img/oc_bitmaptiling_popup.png) Result of bitmap tiling
 
 An optimized version creates a single BitmapData instance referenced by multiple
 Bitmap instances and produces the same result:
@@ -113,10 +113,10 @@ altering the original BitmapData instance by using the Bitmap properties:
 
 The following image shows the result of the bitmap transformations:
 
-![](../img/oc_bitmatransform_popup.png) Result of bitmap transformations
+![](../../img/oc_bitmatransform_popup.png) Result of bitmap transformations
 
-- [Object pooling](WS948100b6829bd5a6-19cd3c2412513c24bce-8000.html)
+- [Object pooling](./object-pooling.md)
 
 More Help topics
 
-[Bitmap caching](WS4bebcd66a74275c36c11f3d612431904db9-7ffc.html)
+[Bitmap caching](../../rendering-performance/bitmap-caching/index.md)

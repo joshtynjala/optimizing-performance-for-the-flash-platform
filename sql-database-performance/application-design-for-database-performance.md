@@ -106,8 +106,8 @@ The application then processes each row of data in a loop. For example, it
 formats the data or creates objects from it. Processing that data can take a
 large amount of time, which could cause rendering problems such as a frozen or
 non-responsive screen. As described in
-[Asynchronous operations](WS948100b6829bd5a6-4c2e64612754b0a95b-8000.html), one
-solution is to divide up the work into chunks. The SQL database API makes
+[Asynchronous operations](../rendering-performance/asynchronous-operations.md),
+one solution is to divide up the work into chunks. The SQL database API makes
 dividing up data processing easy to do.
 
 The SQLStatement class’s `execute()` method has an optional `prefetch` parameter

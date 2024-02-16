@@ -47,4 +47,4 @@ unnecessary redraw regions and optimization areas that have been missed.
 
 More Help topics
 
-[Freezing and unfreezing objects](WS4bebcd66a74275c36cfb8137124318eebc6-7ffc.html)
+[Freezing and unfreezing objects](../minimizing-cpu-usage.md#freezing-and-unfreezing-objects)

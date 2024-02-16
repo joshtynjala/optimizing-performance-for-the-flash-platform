@@ -83,4 +83,4 @@ collection, by passing the XML tree as a parameter.
 
 More Help topics
 
-[Freezing and unfreezing objects](WS4bebcd66a74275c36cfb8137124318eebc6-7ffc.html)
+[Freezing and unfreezing objects](../minimizing-cpu-usage.md#freezing-and-unfreezing-objects)

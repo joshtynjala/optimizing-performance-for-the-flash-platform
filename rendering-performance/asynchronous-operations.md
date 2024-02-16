@@ -18,7 +18,7 @@ event, and your code can listen for that event to perform further work.
 Asynchronous operations are scheduled and divided to avoid rendering issues.
 Consequently, it is much easier to have a responsive application using
 asynchronous versions of operations. See
-[Perceived performance versus actual performance](WS948100b6829bd5a61a52657a1274ff66899-7fff.html)
+[Perceived performance versus actual performance](../introduction/perceived-performance-vs-actual-performance.md)
 for more information.
 
 However, there is some overhead involved in running operations asynchronously.
@@ -60,7 +60,7 @@ asynchronously:
 
   For additional strategies for improving performance with the local SQL
   database, see
-  [SQL database performance](WS948100b6829bd5a623a79aca1274e8b2497-8000.html).
+  [SQL database performance](../sql-database-performance/index.md).
 
 - Pixel Bender standalone shaders
 

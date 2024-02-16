@@ -133,7 +133,7 @@ Object and its surface bitmap stored in memory
 
 Flash Player 10.1 and AIR 2.5 optimize the use of memory by taking the same
 approach as described in the
-[Filters and dynamic bitmap unloading](WS4bebcd66a74275c3-576ba64d124318d7189-7ff8.html).
+[Filters and dynamic bitmap unloading](../../conserving-memory/filters-and-dynamic-bitmap-unloading.md).
 If a cached display object is hidden or offscreen, its bitmap in memory is freed
 when unused for a while. Note: If the display object’s `opaqueBackground`
 property is set to a specific color, the runtime considers the display object to
@@ -254,4 +254,4 @@ optimize graphics using bitmaps in the following training videos:
 - [Optimizing Graphics](http://www.adobe.com/go/learn_video_optimizing_graphics_en)
 
 - [Optimizing Graphics with ActionScript](http://www.adobe.com/go/learn_video_optimizing_graphics_with_ActionScript_en)
-- [Cached bitmap transform matrixes in AIR](WS901d38e593cd1bac-11f566412b2b29517b-8000.html)
+- [Cached bitmap transform matrixes in AIR](./cached-bitmap-transform-matrixes-in-air.md)

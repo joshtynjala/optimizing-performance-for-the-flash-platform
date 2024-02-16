@@ -11,6 +11,6 @@ possible.
 
 More Help topics
 
-[Bitmap caching](WS4bebcd66a74275c36c11f3d612431904db9-7ffc.html)
+[Bitmap caching](./bitmap-caching/index.md)
 
-[Rendering text objects](WS4bebcd66a74275c36c11f3d612431904db9-7ff9.html)
+[Rendering text objects](./rendering-text-objects.md)

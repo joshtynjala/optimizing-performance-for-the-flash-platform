@@ -3,7 +3,7 @@
 ![](../../img/tip_help.png) In general, use the lowest possible frame rate for
 better performance. An application’s frame rate determines how much time is
 available for each “application code and rendering” cycle, as described in
-[Runtime code execution fundamentals](WS948100b6829bd5a61a52657a1274ff66899-8000.html).
+[Runtime code execution fundamentals](../../introduction/runtime-code-execution-fundamentals.md).
 A higher frame rate creates smoother animation. However, when animation or other
 visual changes aren’t happening, there is often no reason to have a high frame
 rate. A higher frame rate expends more CPU cycles and energy from the battery
@@ -94,4 +94,4 @@ source code for the FramerateThrottler class, see Grant’s article Idle CPU Usa
 in Adobe AIR and Flash Player at
 <http://gskinner.com/blog/archives/2009/05/idle_cpu_usage.html>.
 
-- [Adaptive frame rate](WS948100b6829bd5a6cb6b9fb127693b6f9b-8000.html)
+- [Adaptive frame rate](./adaptive-frame-rate.md)

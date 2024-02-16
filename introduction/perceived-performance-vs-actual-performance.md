@@ -35,8 +35,8 @@ application never executes so much code that the runtime isn’t able to
 frequently update the screen and gather user input. In some cases, achieving
 this balance involves dividing up a program task into parts so that, between
 parts, the runtime updates the screen. (See
-[Rendering performance](WS4bebcd66a74275c36c11f3d612431904db9-8000.html) for
-specific guidance.)
+[Rendering performance](../rendering-performance/index.md) for specific
+guidance.)
 
 The tips and techniques described here target improvements in both actual code
 execution performance and in how users perceive performance.

@@ -29,6 +29,6 @@ Some of these optimizations focus on capabilities introduced in Flash Player
 10.1 and AIR 2.5. However, many of these optimizations apply to earlier AIR and
 Flash Player releases, too.
 
-- [Runtime code execution fundamentals](WS948100b6829bd5a61a52657a1274ff66899-8000.html)
-- [Perceived performance versus actual performance](WS948100b6829bd5a61a52657a1274ff66899-7fff.html)
-- [Target your optimizations](WS948100b6829bd5a61a52657a1274ff66899-7ffe.html)
+- [Runtime code execution fundamentals](./runtime-code-execution-fundamentals.md)
+- [Perceived performance versus actual performance](./perceived-performance-vs-actual-performance.md)
+- [Target your optimizations](./target-your-optimizations.md)

@@ -13,4 +13,4 @@ behaviors, such as input handling and word-wrap.
 
 More Help topics
 
-[Rendering text objects](WS4bebcd66a74275c36c11f3d612431904db9-7ff9.html)
+[Rendering text objects](../rendering-performance/rendering-text-objects.md)

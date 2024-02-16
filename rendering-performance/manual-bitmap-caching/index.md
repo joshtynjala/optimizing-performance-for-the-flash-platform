@@ -152,4 +152,4 @@ anti-aliased bitmap with anti-aliased text, even with the Stage quality set to
 case, setting the Stage quality to `LOW` updates the vector quality, which
 updates the bitmap surfaces in memory, and updates the final quality.
 
-- [Isolating behaviors](WS4bebcd66a74275c36c11f3d612431904db9-7ffa.html)
+- [Isolating behaviors](./isolating-behaviors.md)

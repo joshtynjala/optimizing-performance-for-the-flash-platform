@@ -31,7 +31,7 @@ doesn’t freeze.
 One key to knowing what to optimize, and whether optimizations are helpful, is
 to conduct performance tests. Several techniques and tips for testing
 performance are described in
-[Benchmarking and deploying](WS4bebcd66a74275c3-315cd077124319488fd-8000.html).
+[Benchmarking and deploying](../benchmarking-and-deploying/index.md).
 
 For more information about determining parts of an application that are good
 candidates for optimization, see the following resources:

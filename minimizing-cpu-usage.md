@@ -46,7 +46,7 @@ ThrottleEvent when Flash Player pauses, throttles, or resumes play.
 The ThrottleEvent is a broadcast event, which means that it is dispatched by all
 EventDispatcher objects with a listener registered for this event. For more
 information about broadcast events, see the
-[DisplayObject](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/DisplayObject.html)
+[DisplayObject](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/DisplayObject.html)
 class.
 
 ### Instance management
@@ -480,6 +480,6 @@ content run faster on low-tier devices.
 
 More Help topics
 
-[Application frame rate](WS948100b6829bd5a61c0b0b612763986266-8000.html)
+[Application frame rate](./rendering-performance/application-frame-rate/index.md)
 
-[Isolating behaviors](WS4bebcd66a74275c36c11f3d612431904db9-7ffa.html)
+[Isolating behaviors](./rendering-performance/manual-bitmap-caching/isolating-behaviors.md)
