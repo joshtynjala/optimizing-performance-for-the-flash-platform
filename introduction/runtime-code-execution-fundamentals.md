@@ -60,12 +60,16 @@ choppy. In worse cases, the application freezes and the window goes blank.
 For more details about the Flash Platform runtime code execution and rendering
 model, see the following resources:
 
-- [Flash Player Mental Model - The Elastic Racetrack](http://tedpatrick.com/2005/07/19/flash-player-mental-model-the-elastic-racetrack/)
+- [Flash Player Mental Model - The Elastic Racetrack](https://web.archive.org/web/20140316000435/http://tedpatrick.com/2005/07/19/flash-player-mental-model-the-elastic-racetrack/)
   (article by Ted Patrick)
 
-- [Asynchronous ActionScript Execution](http://www.senocular.com/flash/tutorials/asyncoperations/)
+- [Updated 'Elastic Racetrack' for Flash 9 and AVM2](https://web.archive.org/web/20230321111648/https://www.craftymind.com/updated-elastic-racetrack-for-flash-9-and-avm2/)
+  (article by Sean Christmann)
+
+- [Asynchronous ActionScript Execution](https://web.archive.org/web/20120509020649/http://www.senocular.com/flash/tutorials/asyncoperations/)
   (article by Trevor McCauley)
 
 - Optimizing Adobe AIR for code execution, memory & rendering at
-  <http://www.adobe.com/go/learn_fp_air_perf_tv_en> (Video of MAX conference
-  presentation by Sean Christmann)
+  <https://web.archive.org/web/20140218170500/http://tv.adobe.com/watch/max-2008-develop/optimizing-adobe-air-for-code-execution-memory-rendering/>
+  (Video of MAX conference presentation by Sean Christmann)
+  [(PDF version)](https://web.archive.org/web/20220121181111/http://www.craftymind.com/wordpress/wp-content/uploads/2008/11/sean_christmann_optimizing_air_final.pdf)

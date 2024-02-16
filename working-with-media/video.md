@@ -1,7 +1,7 @@
 # Video
 
 For information about optimizing the performance of video on mobile devices, see
-[Optimize web content for mobile delivery](http://www.adobe.com/go/fpmobiletools)
+[Optimize web content for mobile delivery](https://web.archive.org/web/20120713034701/http://www.adobe.com/devnet/devices/fpmobile.html)
 on the Adobe Developer Connection web site.
 
 In particular, see the sections called:

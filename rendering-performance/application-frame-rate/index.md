@@ -81,10 +81,10 @@ frame rate throttling.
 For more information on dynamically changing an application’s frame rate, see
 the following articles:
 
-- [Reducing CPU usage in Adobe AIR](http://www.adobe.com/devnet/air/flex/articles/framerate_throttling.html)
+- [Reducing CPU usage in Adobe AIR](https://web.archive.org/web/20120130203826/http://www.adobe.com/devnet/air/flex/articles/framerate_throttling.html)
   (Adobe Developer Center article and sample code by Jonnie Hallman)
 
-- [Writing well-behaved, efficient, AIR applications](http://arno.org/arnotify/2009/05/writing-well-behaved-efficient-air-applications/)
+- [Writing well-behaved, efficient, AIR applications](https://web.archive.org/web/20150228212345/http://arno.org/arnotify/2009/05/writing-well-behaved-efficient-air-applications/)
   (article and sample application by Arno Gourdol)
 
 Grant Skinner has created a frame rate throttler class. You can use this class
@@ -92,6 +92,6 @@ in your applications to automatically decrease the frame rate when your
 application is in the background. For more information and to download the
 source code for the FramerateThrottler class, see Grant’s article Idle CPU Usage
 in Adobe AIR and Flash Player at
-<http://gskinner.com/blog/archives/2009/05/idle_cpu_usage.html>.
+<https://web.archive.org/web/20110811155738/http://gskinner.com/blog/archives/2009/05/idle_cpu_usage_.html>.
 
 - [Adaptive frame rate](./adaptive-frame-rate.md)

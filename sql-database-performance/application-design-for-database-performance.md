@@ -182,4 +182,5 @@ minimizing the potential downsides. The library uses a pool of SQLConnection
 objects and manages the associated SQLStatement objects. In this way it ensures
 that SQLStatement objects are reused, and multiple SQLConnection objects are
 available to execute multiple statements simultaneously. For more information
-and to download the library, visit <http://probertson.com/projects/air-sqlite/>.
+and to download the library, visit
+<https://web.archive.org/web/20140628170011/http://probertson.com/projects/air-sqlite/>.

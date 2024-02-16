@@ -88,24 +88,28 @@ There are a few established patterns for structuring code to divide up work in
 this way. The following articles and code libraries describe these patterns and
 provide code to help you implement them in your applications:
 
-- [Asynchronous ActionScript Execution](http://www.senocular.com/flash/tutorials/asyncoperations/)
+- [Asynchronous ActionScript Execution](https://web.archive.org/web/20120509020649/http://www.senocular.com/flash/tutorials/asyncoperations/)
   (article by Trevor McCauley with more background details as well as several
   implementation examples)
 
-- [Parsing & Rendering Lots of Data in Flash Player](http://jessewarden.com/2009/02/parsing-rendering-lots-of-data-in-flash-player.html)
+- [Parsing & Rendering Lots of Data in Flash Player](https://web.archive.org/web/20150601191847/http://jessewarden.com/2009/02/parsing-rendering-lots-of-data-in-flash-player.html)
   (article by Jesse Warden with background details and examples of two
   approaches, the “builder pattern” and “green threads”)
 
-- [Green Threads](http://blog.generalrelativity.org/actionscript-30/green-threads/)
+- [Green Threads](https://web.archive.org/web/20121031135308/http://blog.generalrelativity.org/actionscript-30/green-threads/)
   (article by Drew Cummins describing the “green threads” technique with example
   source code)
 
-- [greenthreads](http://code.google.com/p/greenthreads/) (open-source code
-  library by Charlie Hubbard, for implementing “green threads” in ActionScript.
-  See the
-  [greenthreads Quick Start](http://code.google.com/p/greenthreads/wiki/QuickStart)
+- [greenthreads](https://code.google.com/archive/p/greenthreads/) (open-source
+  code library by Charlie Hubbard, for implementing “green threads” in
+  ActionScript. See Actionscript and Concurrency
+  [Part 1](https://web.archive.org/web/20150504000342/http://wrongnotes.blogspot.com/2009/02/concurrency-and-actionscript-part-i-of.html),
+  [Part 2](https://web.archive.org/web/20150503235745/http://wrongnotes.blogspot.com/2009/02/actionscript-and-concurrency-ii-of-iii.html),
+  and
+  [Part 3](https://web.archive.org/web/20160208223856/http://wrongnotes.blogspot.com/2009/02/actionscript-and-concurrency-iii-of-iii.html)
   for more information.)
 
-- Threads in ActionScript 3 at <http://www.adobe.com/go/learn_fp_as3_threads_en>
+- Threads in ActionScript 3 at
+  <https://web.archive.org/web/20100604234338/http://blogs.adobe.com/aharui/2008/01/threads_in_actionscript_3.html>
   (article by Alex Harui, including an example implementation of the “pseudo
   threading” technique)

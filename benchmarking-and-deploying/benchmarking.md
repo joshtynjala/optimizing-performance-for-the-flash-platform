@@ -47,7 +47,7 @@ can be integrated into a unit testing workflow. You pass a custom class to the
 PerformanceTest class, which performs a series of tests on your code. The
 PerformanceTest class allows you to benchmark different approaches easily. The
 PerformanceTest class can be downloaded at the following address:
-<http://www.gskinner.com/blog/archives/2009/04/as3_performance.html>.
+<https://web.archive.org/web/20110309164943/http://www.gskinner.com/blog/archives/2009/04/as3_performance.html>.
 
 ## Flash Builder profiler
 
@@ -58,7 +58,7 @@ used with content produced in Adobe Flash Professional. To do that, load the
 compiled SWF file from an ActionScript or Flex project into Flash Builder, and
 you can run the profiler on it. For more information on the profiler, see
 “Profiling Flex applications” in
-[Using Flash Builder 4](http://www.adobe.com/go/learn_flex4_usingflashbuilder_en).
+[Using Flash Builder 4](https://web.archive.org/web/20150219140156/http://help.adobe.com/en_US/Flex/4.0/UsingFlashBuilder/index.html).
 
 ## FlexPMD
 
@@ -69,10 +69,8 @@ ActionScript 3.0 or Flex source directory. It detects poor coding practices,
 such as unused code, overly complex code, overly lengthy code, and incorrect use
 of the Flex component life cycle.
 
-FlexPMD is an Adobe open-source project available at the following address:
-<http://opensource.adobe.com/wiki/display/flexpmd/FlexPMD>. An Eclipse plug-in
-is also available at the following address:
-<http://opensource.adobe.com/wiki/display/flexpmd/FlexPMD+Eclipse+plugin>.
+FlexPMD is an Apache open-source project available at the following address:
+<https://github.com/apache/flex-utilities/tree/develop/FlexPMD>.
 
 FlexPMD makes it easier to audit code and to make sure that your code is clean
 and optimized. The real power of FlexPMD lies in its extensibility. As a

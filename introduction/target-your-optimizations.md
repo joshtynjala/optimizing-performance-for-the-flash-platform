@@ -37,9 +37,10 @@ For more information about determining parts of an application that are good
 candidates for optimization, see the following resources:
 
 - Performance-tuning apps for AIR at
-  <http://www.adobe.com/go/learn_fp_goldman_tv_en> (Video of MAX conference
-  presentation by Oliver Goldman)
+  <https://web.archive.org/web/20130309154235/http://tv.adobe.com/watch/max-2008-develop/performance-apps-for-air-by-oliver-goldman/>
+  (Video of MAX conference presentation by Oliver Goldman)
 
 - Performance-tuning Adobe AIR applications at
-  <http://www.adobe.com/go/learn_fp_air_perf_devnet_en> (Adobe Developer
-  Connection article by Oliver Goldman, based on the presentation)
+  <https://web.archive.org/web/20140330201751/http://www.adobe.com/devnet/air/articles/air_performance.html>
+  (Adobe Developer Connection article by Oliver Goldman, based on the
+  presentation)

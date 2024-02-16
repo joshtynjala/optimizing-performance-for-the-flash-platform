@@ -239,4 +239,4 @@ reverse order is faster than a forward loop:
 These tips provide a few ways to optimize ActionScript, showing how a single
 line of code can affect performance and memory. Many other ActionScript
 optimizations are possible. For more information, see the following link:
-<http://www.rozengain.com/blog/2007/05/01/some-actionscript-30-optimizations/>.
+<https://web.archive.org/web/20110810061959/http://www.rozengain.com/blog/2007/05/01/some-actionscript-30-optimizations/>.

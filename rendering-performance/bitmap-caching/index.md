@@ -251,7 +251,4 @@ performance, and consumes more battery life.
 Paul Trani provides examples of using Flash Professional and ActionScript to
 optimize graphics using bitmaps in the following training videos:
 
-- [Optimizing Graphics](http://www.adobe.com/go/learn_video_optimizing_graphics_en)
-
-- [Optimizing Graphics with ActionScript](http://www.adobe.com/go/learn_video_optimizing_graphics_with_ActionScript_en)
 - [Cached bitmap transform matrixes in AIR](./cached-bitmap-transform-matrixes-in-air.md)

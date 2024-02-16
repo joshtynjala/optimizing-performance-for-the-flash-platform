@@ -7,8 +7,8 @@ a SQL statement is to test them directly with your database and data.
 The following development tools provide execution times when running SQL
 statements. Use them to compare the speed of alternative versions of statements:
 
-- [Run!](http://probertson.com/projects/run-air-sqlite-query-testing-tool/) (AIR
-  SQL query authoring and testing tool, by Paul Robertson)
+- [Run!](https://web.archive.org/web/20150814070531/http://probertson.com/projects/run-air-sqlite-query-testing-tool/)
+  (AIR SQL query authoring and testing tool, by Paul Robertson)
 
-- [Lita](http://www.dehats.com/drupal/?q=node/58) (SQLite Administration Tool,
-  by David Deraedt)
+- [Lita](https://github.com/davidderaedt/Lita) (SQLite Administration Tool, by
+  David Deraedt)

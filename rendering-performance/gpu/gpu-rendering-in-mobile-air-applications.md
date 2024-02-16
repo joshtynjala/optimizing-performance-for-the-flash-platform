@@ -9,7 +9,8 @@ GPU acceleration of Flash content with AIR for mobile platforms, Adobe
 recommends that you use renderMode="direct" (that is, Stage3D) rather than
 renderMode="gpu". Adobe officially supports and recommends the following Stage3D
 based frameworks: Starling (2D) and Away3D (3D). For more details on Stage3D and
-Starling/Away3D, see <http://gaming.adobe.com/getstarted/>.
+Starling/Away3D, see
+<https://web.archive.org/web/20140209182418/http://gaming.adobe.com/getstarted/>.
 
 #### GPU rendering mode limitations
 

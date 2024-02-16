@@ -32,17 +32,17 @@ Remoting gateway:
     var connection:NetConnection = new NetConnection ();
      
     // Connect to a Flash Remoting gateway
-    connection.connect ("http://www.yourserver.com/remotingservice/gateway.php");
+    connection.connect ("http://www.example.com/remotingservice/gateway.php");
      
     // Asynchronous handlers for incoming data and errors
     function success ( incomingData:* ):void
     {
-    trace( incomingData );
+        trace( incomingData );
     }
      
     function error ( error:* ):void
     {
-    trace( "Error occured" );
+        trace( "Error occured" );
     }
      
     // Create an object that handles the mapping to success and error handlers

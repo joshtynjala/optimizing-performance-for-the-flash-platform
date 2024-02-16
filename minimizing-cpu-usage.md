@@ -466,7 +466,7 @@ redraw regions” feature in the debug Flash Player or AIR.
 For more information about improving performance for repeated actions, see the
 following article:
 
-- [Writing well-behaved, efficient, AIR applications](http://arno.org/arnotify/2009/05/writing-well-behaved-efficient-air-applications/)
+- [Writing well-behaved, efficient, AIR applications](https://web.archive.org/web/20150228212345/http://arno.org/arnotify/2009/05/writing-well-behaved-efficient-air-applications/)
   (article and sample application by Arno Gourdol)
 
 ## Tweening syndrome
