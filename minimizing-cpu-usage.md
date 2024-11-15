@@ -12,13 +12,15 @@ limiting the number of Flash Player instances on a page.
 
 ### Pause, throttle, and resume
 
-Note: The pause, throttle, and resume feature does not apply to Adobe® AIR®
-applications. To optimize CPU and battery usage, Flash Player 10.1 introduces a
-new feature on related to inactive instances. This feature allows you to limit
-CPU usage by pausing and resuming the SWF file when content goes off and on the
-screen. With this feature, Flash Player releases as much memory as possible by
-removing any objects that can be recreated when the playing of content is
-resumed. Content is considered offscreen when the entire content is offscreen.
+> **Note:** The pause, throttle, and resume feature does not apply to Adobe®
+> AIR® applications.
+
+To optimize CPU and battery usage, Flash Player 10.1 introduces a new feature on
+related to inactive instances. This feature allows you to limit CPU usage by
+pausing and resuming the SWF file when content goes off and on the screen. With
+this feature, Flash Player releases as much memory as possible by removing any
+objects that can be recreated when the playing of content is resumed. Content is
+considered offscreen when the entire content is offscreen.
 
 Two scenarios cause the SWF content to be offscreen:
 
@@ -51,8 +53,8 @@ class.
 
 ### Instance management
 
-Note: The instance management feature does not apply to Adobe® AIR®
-applications.
+> **Note:** The instance management feature does not apply to Adobe® AIR®
+> applications.
 
 ![](./img/tip_help.png) Use the `hasPriority` HTML parameter to delay loading of
 offscreen SWF files. Flash Player 10.1 introduces a new HTML parameter called
@@ -72,15 +74,19 @@ default behavior when the `hasPriority` parameter is not present or set to
 `false`. To ensure that a SWF file is started, even if it is offscreen, set the
 `hasPriority` parameter to `true`. However, regardless of the value of the
 `hasPriority` parameter, a SWF file that is not visible to the user always has
-its rendering paused. Note: If available CPU resources become low, Flash Player
-instances are no longer started automatically, even if the `hasPriority`
-parameter is set to `true`. If new instances are created through JavaScript
-after the page has been loaded, those instances will ignore the `hasPriority`
-flag. Any 1x1 pixel or 0x0 pixel content is started, preventing helper SWF files
-from being deferred if the webmaster fails to include the `hasPriority` flag.
-SWF files can still be started when clicked, however. This behavior is called
-"click to play." The following diagrams show the effects of setting the
-`hasPriority` parameter to different values:
+its rendering paused.
+
+> **Note:** If available CPU resources become low, Flash Player instances are no
+> longer started automatically, even if the `hasPriority` parameter is set to
+> `true`. If new instances are created through JavaScript after the page has
+> been loaded, those instances will ignore the `hasPriority` flag. Any 1x1 pixel
+> or 0x0 pixel content is started, preventing helper SWF files from being
+> deferred if the webmaster fails to include the `hasPriority` flag. SWF files
+> can still be started when clicked, however. This behavior is called "click to
+> play."
+
+The following diagrams show the effects of setting the `hasPriority` parameter
+to different values:
 
 ![](./img/oc_haspriority_setting_false.png)
 
@@ -137,8 +143,10 @@ runtime behavior:
 
 When the backlight goes into sleep mode, rendering pauses and the frame rate
 slows down. This feature saves CPU processing, but it cannot be relied upon on
-to create a real pause, as in a game application. Note: No ActionScript event is
-dispatched when the runtime enters or leaves sleep mode.
+to create a real pause, as in a game application.
+
+> **Note:** No ActionScript event is dispatched when the runtime enters or
+> leaves sleep mode.
 
 ## Freezing and unfreezing objects
 
@@ -197,28 +205,31 @@ listeners, to prevent CPU-intensive code from being executed:
 
     function activate(e:Event):void
     {
-    // Restart everything
-    e.currentTarget.addEventListener(Event.ENTER_FRAME,handleMovement);
+        // Restart everything
+        e.currentTarget.addEventListener(Event.ENTER_FRAME,handleMovement);
     }
 
     function deactivate(e:Event):void
     {
-    // Freeze the running boy - consumes fewer CPU resources when not shown
-    e.currentTarget.removeEventListener(Event.ENTER_FRAME,handleMovement);
-    e.currentTarget.stop();
+        // Freeze the running boy - consumes fewer CPU resources when not shown
+        e.currentTarget.removeEventListener(Event.ENTER_FRAME,handleMovement);
+        e.currentTarget.stop();
     }
 
 When the Show button is pressed, the movie clip is restarted, it listens to
 `Event.ENTER_FRAME` events again, and the keyboard correctly controls the movie
-clip. Note: If a display object is removed from the display list, setting its
-reference to `null` after removing it does not ensure that the object is frozen.
-If the garbage collector doesn't run, the object continues to consume memory and
-CPU processing, even though the object is no longer displayed. To make sure that
-the object consumes the least CPU processing possible, make sure that you
-completely freeze it when removing it from the display list. Starting with Flash
-Player 10 and AIR 1.5, the following behavior also occurs. If the playhead
-encounters an empty frame, the display object is automatically frozen even if
-you did not implement any freezing behavior.
+clip.
+
+> **Note:** If a display object is removed from the display list, setting its
+> reference to `null` after removing it does not ensure that the object is
+> frozen. If the garbage collector doesn't run, the object continues to consume
+> memory and CPU processing, even though the object is no longer displayed. To
+> make sure that the object consumes the least CPU processing possible, make
+> sure that you completely freeze it when removing it from the display list.
+
+Starting with Flash Player 10 and AIR 1.5, the following behavior also occurs.
+If the playhead encounters an empty frame, the display object is automatically
+frozen even if you did not implement any freezing behavior.
 
 The concept of freezing is also important when loading remote content with the
 Loader class. When using the Loader class with Flash Player 9 and AIR 1.0, it
@@ -369,14 +380,17 @@ A timer can behave in a similar way to an `ENTER_FRAME` event, but an event can
 be dispatched without being tied to the frame rate. This behavior can offer some
 significant optimization. Consider a video player application as an example. In
 this case, you do not need to use a high frame rate, because only the
-application controls are moving. Note: The frame rate does not affect the video,
-because the video is not embedded in the timeline. Instead, the video is loaded
-dynamically through progressive downloading or streaming. In this example, the
-frame rate is set to a low value of 10 fps. The timer updates the controls at a
-rate of one update per second. The higher update rate is made possible by the
-`updateAfterEvent()` method, which is available on the TimerEvent object. This
-method forces the screen to be updated each time the timer dispatches an event,
-if needed. The following code illustrates the idea:
+application controls are moving.
+
+> **Note:** The frame rate does not affect the video, because the video is not
+> embedded in the timeline. Instead, the video is loaded dynamically through
+> progressive downloading or streaming.
+
+In this example, the frame rate is set to a low value of 10 fps. The timer
+updates the controls at a rate of one update per second. The higher update rate
+is made possible by the `updateAfterEvent()` method, which is available on the
+TimerEvent object. This method forces the screen to be updated each time the
+timer dispatches an event, if needed. The following code illustrates the idea:
 
     // Use a low frame rate for the application
     stage.frameRate = 10;

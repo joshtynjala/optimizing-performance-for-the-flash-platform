@@ -1,9 +1,10 @@
 # Reusing objects
 
-![](../../img/tip_help.png) Reuse objects, when possible, instead of recreating
-them. Another simple way to optimize memory is to reuse objects and avoid
-recreating them whenever possible. For example, in a loop, do not use the
-following code:
+> ![](../../img/tip_help.png) Reuse objects, when possible, instead of
+> recreating them.
+
+Another simple way to optimize memory is to reuse objects and avoid recreating
+them whenever possible. For example, in a loop, do not use the following code:
 
     const MAX_NUM:int = 18;
     const COLOR:uint = 0xCCCCCC;
@@ -57,9 +58,10 @@ The following code to create a tiling effect wastes memory:
         myContainer.y = (myContainer.height + 8) * int(i / 20);
     }
 
-Note: When using positive values, casting the rounded value to int is much
-faster than using the `Math.floor()` method. The following image shows the
-result of the bitmap tiling:
+> **Note:** When using positive values, casting the rounded value to int is much
+> faster than using the `Math.floor()` method.
+
+The following image shows the result of the bitmap tiling:
 
 ![](../../img/oc_bitmaptiling_popup.png) Result of bitmap tiling
 

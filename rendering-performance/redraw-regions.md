@@ -1,15 +1,21 @@
 # Redraw regions
 
-![](../img/tip_help.png) Always use the redraw regions option when building your
-project. To improve rendering, it's important to use the redraw regions option
-when building your project. Using this option allows you to see the regions that
+> ![](../img/tip_help.png) Always use the redraw regions option when building
+> your project.
+
+To improve rendering, it's important to use the redraw regions option when
+building your project. Using this option allows you to see the regions that
 Flash Player is rendering and processing. You can enable this option by
 selecting Show Redraw Regions in the context menu of the debug version of Flash
-Player. Note: The Show Redraw Regions option is not available in Adobe AIR or in
-the release version of Flash Player. (In Adobe AIR, the context menu is
-available only in desktop applications, but it has no built-in or standard items
-such as Show Redraw Regions.) The image below illustrates the option enabled
-with a simple animated MovieClip on the timeline:
+Player.
+
+> **Note:** The Show Redraw Regions option is not available in Adobe AIR or in
+> the release version of Flash Player. (In Adobe AIR, the context menu is
+> available only in desktop applications, but it has no built-in or standard
+> items such as Show Redraw Regions.)
+
+The image below illustrates the option enabled with a simple animated MovieClip
+on the timeline:
 
 ![](../img/or_redraw_region1_popup.png)
 

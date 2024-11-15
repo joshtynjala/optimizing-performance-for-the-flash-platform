@@ -1,10 +1,12 @@
 # External content
 
-![](../img/tip_help.png) Divide your application into multiple SWF files. Mobile
-devices can have limited access to the network. To load your content quickly,
-divide your application into multiple SWF files. Try to reuse code logic and
-assets through the entire application. For example, consider an application that
-has been divided into multiple SWF files, as shown in the following diagram:
+> ![](../img/tip_help.png) Divide your application into multiple SWF files.
+
+Mobile devices can have limited access to the network. To load your content
+quickly, divide your application into multiple SWF files. Try to reuse code
+logic and assets through the entire application. For example, consider an
+application that has been divided into multiple SWF files, as shown in the
+following diagram:
 
 ![](../img/on_externalcontent.png)
 

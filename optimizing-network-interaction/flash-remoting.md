@@ -1,11 +1,13 @@
 # Flash Remoting
 
-![](../img/tip_help.png) Use Flash Remoting and AMF for optimized client-server
-data communication. You can use XML to load remote content into SWF files.
-However, XML is plain text that the runtime loads and parses. XML works best for
-applications that load a limited amount of content. If you are developing an
-application that loads a large amount of content, consider using the Flash
-Remoting technology and Action Message Format (AMF).
+> ![](../img/tip_help.png) Use Flash Remoting and AMF for optimized
+> client-server data communication.
+
+You can use XML to load remote content into SWF files. However, XML is plain
+text that the runtime loads and parses. XML works best for applications that
+load a limited amount of content. If you are developing an application that
+loads a large amount of content, consider using the Flash Remoting technology
+and Action Message Format (AMF).
 
 AMF is a binary format used to share data between a server and the runtime.
 Using AMF reduces the size of the data and improves the speed of transmission.
@@ -53,8 +55,10 @@ Remoting gateway:
 
 Connecting to a remoting gateway is straightforward. However, using Flash
 Remoting can be made even easier by using the RemoteObject class included in the
-Adobe® Flex® SDK. Note: External SWC files, such as the ones from the Flex
-framework, can be used inside an Adobe® Flash® Professional project. Using SWC
-files allows you to use the RemoteObject class and its dependencies without
-using the rest of the Flex SDK. Advanced developers can even communicate with a
-remoting gateway directly through the raw Socket class, if necessary.
+Adobe® Flex® SDK.
+
+> **Note:** External SWC files, such as the ones from the Flex framework, can be
+> used inside an Adobe® Flash® Professional project. Using SWC files allows you
+> to use the RemoteObject class and its dependencies without using the rest of
+> the Flex SDK. Advanced developers can even communicate with a remoting gateway
+> directly through the raw Socket class, if necessary.

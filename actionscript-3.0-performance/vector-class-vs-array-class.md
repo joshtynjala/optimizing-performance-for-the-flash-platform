@@ -1,8 +1,9 @@
 # Vector class versus Array class
 
-![](../img/tip_help.png) Use the Vector class instead of the Array class, when
-possible. The Vector class allows faster read and write access than the Array
-class.
+> ![](../img/tip_help.png) Use the Vector class instead of the Array class, when
+> possible.
+
+The Vector class allows faster read and write access than the Array class.
 
 A simple benchmark shows the benefits of the Vector class over the Array class.
 The following code shows a benchmark for the Array class:

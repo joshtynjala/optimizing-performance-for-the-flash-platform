@@ -1,10 +1,12 @@
 # Movie quality
 
-![](../img/tip_help.png) Use the appropriate Stage quality setting to improve
-rendering. When developing content for mobile devices with small screens, such
-as phones, image quality is less important than when developing desktop
-applications. Setting the Stage quality to the appropriate setting can improve
-rendering performance.
+> ![](../img/tip_help.png) Use the appropriate Stage quality setting to improve
+> rendering.
+
+When developing content for mobile devices with small screens, such as phones,
+image quality is less important than when developing desktop applications.
+Setting the Stage quality to the appropriate setting can improve rendering
+performance.
 
 The following settings are available for Stage quality:
 
@@ -27,13 +29,16 @@ The following settings are available for Stage quality:
 Using `StageQuality.MEDIUM` often provides enough quality for applications on
 mobile devices, and in some cases using `StageQuality.LOW` can provide enough
 quality. Since Flash Player 8, anti-aliased text can be rendered accurately,
-even with Stage quality set to `LOW`. Note: On some mobile devices, even though
-the quality is set to `HIGH`, `MEDIUM` is used for better performance in Flash
-Player applications. However, setting the quality to HIGH often does not make a
-noticeable difference, because mobile screens usually have a higher dpi. (The
-dpi can vary depending on the device.) In the following figure, the movie
-quality is set to `MEDIUM` and the text rendering is set to Anti-Alias for
-Animation:
+even with Stage quality set to `LOW`.
+
+> **Note:** On some mobile devices, even though the quality is set to `HIGH`,
+> `MEDIUM` is used for better performance in Flash Player applications. However,
+> setting the quality to HIGH often does not make a noticeable difference,
+> because mobile screens usually have a higher dpi. (The dpi can vary depending
+> on the device.)
+
+In the following figure, the movie quality is set to `MEDIUM` and the text
+rendering is set to Anti-Alias for Animation:
 
 ![](../img/or_medquality_antialias.png)
 

@@ -6,11 +6,14 @@ all platforms called BitmapData single reference. When creating BitmapData
 instances from an embedded image, a single version of the bitmap is used for all
 BitmapData instances. If a bitmap is modified later, it is given its own unique
 bitmap in memory. The embedded image can be from the library or an \[Embed\]
-tag. Note: Existing content also benefits from this new feature, because Flash
-Player 10.1 and AIR 2.5 automatically reuse bitmaps. When instantiating an
-embedded image, an associated bitmap is created in memory. Before Flash Player
-10.1 and AIR 2.5, each instance was given a separate bitmap in memory, as shown
-in the following diagram:
+tag.
+
+> **Note:** Existing content also benefits from this new feature, because Flash
+> Player 10.1 and AIR 2.5 automatically reuse bitmaps.
+
+When instantiating an embedded image, an associated bitmap is created in memory.
+Before Flash Player 10.1 and AIR 2.5, each instance was given a separate bitmap
+in memory, as shown in the following diagram:
 
 ![](../../img/oc_bitmaps_inmemoryFPold.png)
 
@@ -150,7 +153,9 @@ Result of rotating stars
 With this approach, updating the original source BitmapData object automatically
 updates its use elsewhere on the stage, which can be a powerful technique. This
 approach would not, however, allow each star to be scaled individually, as in
-the previous example. Note: When using multiple instances of the same image,
-drawing depends on whether a class is associated with the original bitmap in
-memory. If no class is associated with the bitmap, images are drawn as Shape
-objects with bitmap fills.
+the previous example.
+
+> **Note:** When using multiple instances of the same image, drawing depends on
+> whether a class is associated with the original bitmap in memory. If no class
+> is associated with the bitmap, images are drawn as Shape objects with bitmap
+> fills.

@@ -1,9 +1,10 @@
 # Vector shape smoothing
 
-![](../img/tip_help.png) Smooth shapes to improve rendering performance. Unlike
-bitmaps, rendering vector content requires many calculations, especially for
-gradients and complex paths that contain many control points. As a designer or
-developer, make sure that shapes are optimized enough. The following figure
+> ![](../img/tip_help.png) Smooth shapes to improve rendering performance.
+
+Unlike bitmaps, rendering vector content requires many calculations, especially
+for gradients and complex paths that contain many control points. As a designer
+or developer, make sure that shapes are optimized enough. The following figure
 illustrates non-simplified paths with many control points:
 
 ![](../img/or_nonoptpath_popup.png)

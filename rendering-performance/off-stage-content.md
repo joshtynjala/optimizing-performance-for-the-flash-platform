@@ -1,10 +1,11 @@
 # Off-stage content
 
-![](../img/tip_help.png) Avoid placing content off-stage. Instead, just place
-objects on the display list when needed. If possible, try not to place graphical
-content off-stage. Designers and developers commonly place elements off-stage to
-reuse assets during the lifetime of the application. The following figure
-illustrates this common technique:
+> ![](../img/tip_help.png) Avoid placing content off-stage.
+
+Instead, just place objects on the display list when needed. If possible, try
+not to place graphical content off-stage. Designers and developers commonly
+place elements off-stage to reuse assets during the lifetime of the application.
+The following figure illustrates this common technique:
 
 ![](../img/or_offstage_elements_popup.png)
 

@@ -1,9 +1,10 @@
 # Transparent windows
 
-![](../img/tip_help.png) In AIR desktop applications, consider using an opaque
-rectangular application window instead of a transparent window. To use an opaque
-window for the initial window of an AIR desktop application, set the following
-value in the application descriptor XML file:
+> ![](../img/tip_help.png) In AIR desktop applications, consider using an opaque
+> rectangular application window instead of a transparent window.
+
+To use an opaque window for the initial window of an AIR desktop application,
+set the following value in the application descriptor XML file:
 
     <initialWindow>
     	<transparent>false</transparent>

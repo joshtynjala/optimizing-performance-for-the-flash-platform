@@ -1,12 +1,14 @@
 # Event model versus callbacks
 
-![](../img/tip_help.png) Consider using simple callbacks, instead of the event
-model. The ActionScript 3.0 event model is based on the concept of object
-dispatching. The event model is object-oriented and optimized for code reuse.
-The `dispatchEvent()` method loops through the list of listeners and calls the
-event handler method on each registered object. However, one of the drawbacks of
-the event model is that you are likely to create many objects over the lifetime
-of your application.
+> ![](../img/tip_help.png) Consider using simple callbacks, instead of the event
+> model.
+
+The ActionScript 3.0 event model is based on the concept of object dispatching.
+The event model is object-oriented and optimized for code reuse. The
+`dispatchEvent()` method loops through the list of listeners and calls the event
+handler method on each registered object. However, one of the drawbacks of the
+event model is that you are likely to create many objects over the lifetime of
+your application.
 
 Imagine that you must dispatch an event from the timeline, indicating the end of
 an animation sequence. To accomplish the notification, you can dispatch an event

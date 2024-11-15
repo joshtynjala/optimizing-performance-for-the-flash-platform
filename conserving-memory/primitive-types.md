@@ -1,9 +1,10 @@
 # Primitive types
 
-![](../img/tip_help.png) Use the `getSize()` method to benchmark code and
-determine the most efficient object for the task. All primitive types except
-String use 4 – 8 bytes in memory. There is no way to optimize memory by using a
-specific type for a primitive:
+> ![](../img/tip_help.png) Use the `getSize()` method to benchmark code and
+> determine the most efficient object for the task
+
+All primitive types except String use 4 – 8 bytes in memory. There is no way to
+optimize memory by using a specific type for a primitive:
 
     // Primitive types
     var a:Number;

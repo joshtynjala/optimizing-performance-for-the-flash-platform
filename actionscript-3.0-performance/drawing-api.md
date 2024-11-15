@@ -1,11 +1,12 @@
 # Drawing API
 
-![](../img/tip_help.png) Use the drawing API for faster code execution. Flash
-Player 10 and AIR 1.5 provided a new drawing API, which allows you to get better
-code execution performance. This new API does not provide rendering performance
-improvement, but it can dramatically reduce the number of lines of code you have
-to write. Fewer lines of code can provide better ActionScript execution
-performance.
+> ![](../img/tip_help.png) Use the drawing API for faster code execution.
+
+Flash Player 10 and AIR 1.5 provided a new drawing API, which allows you to get
+better code execution performance. This new API does not provide rendering
+performance improvement, but it can dramatically reduce the number of lines of
+code you have to write. Fewer lines of code can provide better ActionScript
+execution performance.
 
 The new drawing API includes the following methods:
 
@@ -13,11 +14,14 @@ The new drawing API includes the following methods:
 
 - `drawGraphicsData()`
 
-- `drawTriangles()` Note: This discussion does not focus on the
-  `drawTriangles()` method, which is related to 3D. However, this method can
-  improve ActionScript performance, because it handles native texture mapping.
-  The following code explicitly calls the appropriate method for each line being
-  drawn:
+- `drawTriangles()`
+
+> **Note:** This discussion does not focus on the `drawTriangles()` method,
+> which is related to 3D. However, this method can improve ActionScript
+> performance, because it handles native texture mapping.
+
+The following code explicitly calls the appropriate method for each line being
+drawn:
 
       var container:Shape = new Shape();
       container.graphics.beginFill(0x442299);

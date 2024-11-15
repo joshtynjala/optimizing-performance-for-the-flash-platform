@@ -1,15 +1,16 @@
 # Application design for database performance
 
-![](../img/tip_help.png) Don't change a SQLStatement object's `text` property
-after executing it. Instead, use one SQLStatement instance for each SQL
-statement and use statement parameters to provide different values. Before any
-SQL statement is executed, the runtime prepares (compiles) it to determine the
-steps that are performed internally to carry out the statement. When you call
-`SQLStatement.execute()` on a SQLStatement instance that hasn't executed
-previously, the statement is automatically prepared before it is executed. On
-subsequent calls to the `execute()` method, as long as the `SQLStatement.text`
-property hasn't changed the statement is still prepared. Consequently, it
-executes faster.
+> ![](../img/tip_help.png) Don't change a SQLStatement object's `text` property
+> after executing it.
+
+Instead, use one SQLStatement instance for each SQL statement and use statement
+parameters to provide different values. Before any SQL statement is executed,
+the runtime prepares (compiles) it to determine the steps that are performed
+internally to carry out the statement. When you call `SQLStatement.execute()` on
+a SQLStatement instance that hasn't executed previously, the statement is
+automatically prepared before it is executed. On subsequent calls to the
+`execute()` method, as long as the `SQLStatement.text` property hasn't changed
+the statement is still prepared. Consequently, it executes faster.
 
 To gain the maximum benefit from reusing statements, if values change between
 statement executions, use statement parameters to customize your statement.
@@ -34,12 +35,13 @@ an ActionScript class or as a non-function variable in a JavaScript file. You
 can then set the statement's parameter values and call its `execute()` method
 when you want to actually run the query.
 
-![](../img/tip_help.png) Use database indexes to improve execution speed for
-data comparing and sorting. When you create an index for a column, the database
-stores a copy of that column's data. The copy is kept sorted in numeric or
-alphabetical order. The sorting allows the database to quickly match values
-(such as when using the equality operator) and sort result data using the
-`ORDER BY` clause.
+> ![](../img/tip_help.png) Use database indexes to improve execution speed for
+> data comparing and sorting.
+
+When you create an index for a column, the database stores a copy of that
+column's data. The copy is kept sorted in numeric or alphabetical order. The
+sorting allows the database to quickly match values (such as when using the
+equality operator) and sort result data using the `ORDER BY` clause.
 
 Database indexes are kept continuously up-to-date, which causes data change
 operations (INSERT or UPDATE) on that table to be slightly slower. However, the
@@ -56,11 +58,13 @@ indexing strategy:
 - For a column that contains text data that you retrieve sorted alphabetically,
   specify COLLATE NOCASE collation for the index
 
-![](../img/tip_help.png) Consider pre-compiling SQL statements during
-application idle times. The first time a SQL statement executes, it is slower
-because the SQL text is prepared (compiled) by the database engine. Because
-preparing and executing a statement can be demanding, one strategy is to preload
-initial data and then execute other statements in the background:
+> ![](../img/tip_help.png) Consider pre-compiling SQL statements during
+> application idle times.
+
+The first time a SQL statement executes, it is slower because the SQL text is
+prepared (compiled) by the database engine. Because preparing and executing a
+statement can be demanding, one strategy is to preload initial data and then
+execute other statements in the background:
 
 1.  Load the data that the application needs first.
 
@@ -82,14 +86,16 @@ In practice, if you are reusing SQLStatement instances, the additional time
 required to prepare the statement is only a one-time cost. It probably doesn't
 have a large impact on overall performance.
 
-![](../img/tip_help.png) Group multiple SQL data change operations in a
-transaction. Suppose you're executing many SQL statements that involve adding or
-changing data ( `INSERT` or `UPDATE` statements). You can get a significant
-increase in performance by executing all the statements within an explicit
-transaction. If you don't explicitly begin a transaction, each of the statements
-runs in its own automatically created transaction. After each transaction (each
-statement) finishes executing, the runtime writes the resulting data to the
-database file on the disk.
+> ![](../img/tip_help.png) Group multiple SQL data change operations in a
+> transaction.
+
+Suppose you're executing many SQL statements that involve adding or changing
+data ( `INSERT` or `UPDATE` statements). You can get a significant increase in
+performance by executing all the statements within an explicit transaction. If
+you don't explicitly begin a transaction, each of the statements runs in its own
+automatically created transaction. After each transaction (each statement)
+finishes executing, the runtime writes the resulting data to the database file
+on the disk.
 
 On the other hand, consider what happens if you explicitly create a transaction
 and execute the statements in the context of that transaction. The runtime makes
@@ -99,12 +105,14 @@ the most time-intensive part of the operation. Consequently, writing to the disk
 one time rather than once per SQL statement can improve performance
 significantly.
 
-![](../img/tip_help.png) Process large `SELECT` query results in parts using the
-SQLStatement class's `execute()` method (with `prefetch` parameter) and `next()`
-method. Suppose you execute a SQL statement that retrieves a large result set.
-The application then processes each row of data in a loop. For example, it
-formats the data or creates objects from it. Processing that data can take a
-large amount of time, which could cause rendering problems such as a frozen or
+> ![](../img/tip_help.png) Process large `SELECT` query results in parts using
+> the SQLStatement class's `execute()` method (with `prefetch` parameter) and
+> `next()` method.
+
+Suppose you execute a SQL statement that retrieves a large result set. The
+application then processes each row of data in a loop. For example, it formats
+the data or creates objects from it. Processing that data can take a large
+amount of time, which could cause rendering problems such as a frozen or
 non-responsive screen. As described in
 [Asynchronous operations](../rendering-performance/asynchronous-operations.md),
 one solution is to divide up the work into chunks. The SQL database API makes
@@ -144,16 +152,19 @@ specify a maximum number of rows to return:
 You can continue calling the `next()` method until all the data loads. As shown
 in the previous listing, you can determine when the data has all loaded. Check
 the `complete` property of the SQLResult object that's created each time the
-`execute()` or `next()` method finishes. Note: Use the `prefetch` parameter and
-the `next()` method to divide up the processing of result data. Don't use this
-parameter and method to limit a query's results to a portion of its result set.
-If you only want to retrieve a subset of rows in a statement's result set, use
-the `LIMIT` clause of the `SELECT` statement. If the result set is large, you
-can still use the `prefetch` parameter and `next()` method to divide up the
-processing of the results.
+`execute()` or `next()` method finishes.
 
-![](../img/tip_help.png) Consider using multiple asynchronous SQLConnection
-objects with a single database to execute multiple statements simultaneously.
+> **Note:** Use the `prefetch` parameter and the `next()` method to divide up
+> the processing of result data. Don't use this parameter and method to limit a
+> query's results to a portion of its result set. If you only want to retrieve a
+> subset of rows in a statement's result set, use the `LIMIT` clause of the
+> `SELECT` statement. If the result set is large, you can still use the
+> `prefetch` parameter and `next()` method to divide up the processing of the
+> results.
+
+> ![](../img/tip_help.png) Consider using multiple asynchronous SQLConnection
+> objects with a single database to execute multiple statements simultaneously.
+
 When a SQLConnection object is connected to a database using the `openAsync()`
 method, it runs in the background rather than the main runtime execution thread.
 In addition, each SQLConnection runs in its own background thread. By using

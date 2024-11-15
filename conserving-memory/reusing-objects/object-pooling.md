@@ -105,6 +105,6 @@ the mouse is clicked, and reuses them later for another task:
     		SpritePool.disposeSprite (container.removeChildAt(0) as Sprite );
     }
 
-Note: The pool vector always references the Sprite objects. If you want to
-remove the object from memory completely, you would need a `dispose()` method on
-the SpritePool class, which would remove all remaining references.
+> **Note:** The pool vector always references the Sprite objects. If you want to
+> remove the object from memory completely, you would need a `dispose()` method
+> on the SpritePool class, which would remove all remaining references.

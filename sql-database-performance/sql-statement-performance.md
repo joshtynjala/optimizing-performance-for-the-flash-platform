@@ -1,8 +1,10 @@
 # SQL statement performance
 
-![](../img/tip_help.png) Directly compare alternate SQL statements to determine
-which is faster. The best way to compare the performance of multiple versions of
-a SQL statement is to test them directly with your database and data.
+> ![](../img/tip_help.png) Directly compare alternate SQL statements to
+> determine which is faster.
+
+The best way to compare the performance of multiple versions of a SQL statement
+is to test them directly with your database and data.
 
 The following development tools provide execution times when running SQL
 statements. Use them to compare the speed of alternative versions of statements:

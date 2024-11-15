@@ -1,12 +1,13 @@
 # Bitmap caching
 
-![](../../img/tip_help.png) Use the bitmap caching feature for complex vector
-content, when appropriate. A good optimization can be made by using the bitmap
-caching feature. This feature caches a vector object, renders it as a bitmap
-internally, and uses that bitmap for rendering. The result can be a huge
-performance boost for rendering, but it can require a significant amount of
-memory. Use the bitmap caching feature for complex vector content, like complex
-gradients or text.
+> ![](../../img/tip_help.png) Use the bitmap caching feature for complex vector
+> content, when appropriate.
+
+A good optimization can be made by using the bitmap caching feature. This
+feature caches a vector object, renders it as a bitmap internally, and uses that
+bitmap for rendering. The result can be a huge performance boost for rendering,
+but it can require a significant amount of memory. Use the bitmap caching
+feature for complex vector content, like complex gradients or text.
 
 Turning on bitmap caching for an animated object that contains complex vector
 graphics (such as text or gradients) improves performance. However, if bitmap
@@ -20,14 +21,16 @@ If you turn on bitmap caching for a Sprite object, the object can be moved
 without causing the runtime to regenerate the cached bitmap. Changing the `x`
 and `y` properties of the object does not cause regeneration. However, any
 attempt to rotate it, scale it, or change its alpha value causes the runtime to
-regenerate the cached bitmap, and as a result, hurts performance. Note: The
-`DisplayObject.cacheAsBitmapMatrix` property available in AIR and the Packager
-for iPhone does not have this limitation. By using the `cacheAsBitmapMatrix`
-property, you can rotate, scale, skew, and change the alpha value of a display
-object without triggering bitmap regeneration. A cached bitmap can use more
-memory than a regular movie clip instance. For example, if the movie clip on the
-Stage is 250 x 250 pixels, when cached it uses about 250 KB, instead of 1 KB
-uncached.
+regenerate the cached bitmap, and as a result, hurts performance.
+
+> **Note:** The `DisplayObject.cacheAsBitmapMatrix` property available in AIR
+> and the Packager for iPhone does not have this limitation. By using the
+> `cacheAsBitmapMatrix` property, you can rotate, scale, skew, and change the
+> alpha value of a display object without triggering bitmap regeneration.
+
+A cached bitmap can use more memory than a regular movie clip instance. For
+example, if the movie clip on the Stage is 250 x 250 pixels, when cached it uses
+about 250 KB, instead of 1 KB uncached.
 
 The following example involves a Sprite object that contains an image of an
 apple. The following class is attached to the apple symbol:
@@ -135,19 +138,22 @@ Flash Player 10.1 and AIR 2.5 optimize the use of memory by taking the same
 approach as described in the
 [Filters and dynamic bitmap unloading](../../conserving-memory/filters-and-dynamic-bitmap-unloading.md).
 If a cached display object is hidden or offscreen, its bitmap in memory is freed
-when unused for a while. Note: If the display object's `opaqueBackground`
-property is set to a specific color, the runtime considers the display object to
-be opaque. When used with the `cacheAsBitmap` property, the runtime creates a
-non-transparent 32-bit bitmap in memory. The alpha channel is set to 0xFF, which
-improves performance, because no transparency is required to draw the bitmap
-onscreen. Avoiding alpha blending makes rendering even faster. If the current
-screen depth is limited to 16 bits, then the bitmap in memory is stored as a
-16-bit image. Using the `opaqueBackground` property does not implicitly activate
-bitmap caching. To save memory, use the `cacheAsBitmap` property and activate it
-on each display object rather than on the container. Activating bitmap caching
-on the container makes the final bitmap much larger in memory, creating a
-transparent bitmap with dimensions of 211 x 279 pixels. The image uses around
-229 KB of memory:
+when unused for a while.
+
+> **Note:** If the display object's `opaqueBackground` property is set to a
+> specific color, the runtime considers the display object to be opaque. When
+> used with the `cacheAsBitmap` property, the runtime creates a non-transparent
+> 32-bit bitmap in memory. The alpha channel is set to 0xFF, which improves
+> performance, because no transparency is required to draw the bitmap onscreen.
+> Avoiding alpha blending makes rendering even faster. If the current screen
+> depth is limited to 16 bits, then the bitmap in memory is stored as a 16-bit
+> image. Using the `opaqueBackground` property does not implicitly activate
+> bitmap caching.
+
+To save memory, use the `cacheAsBitmap` property and activate it on each display
+object rather than on the container. Activating bitmap caching on the container
+makes the final bitmap much larger in memory, creating a transparent bitmap with
+dimensions of 211 x 279 pixels. The image uses around 229 KB of memory:
 
 ![](../../img/or_activate_bitmap_container_popup.png)
 

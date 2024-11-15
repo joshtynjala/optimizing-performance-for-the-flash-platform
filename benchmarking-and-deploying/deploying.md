@@ -7,6 +7,8 @@ Removing the debugging information makes the SWF file size smaller and helps the
 application to run faster.
 
 To export the release version of your project, use the Project panel in Flash
-Builder and the Export Release Build option. Note: When compiling your project
-in Flash Professional, you do not have the option of choosing between release
-and debugging version. The compiled SWF file is a release version by default.
+Builder and the Export Release Build option.
+
+> **Note:** When compiling your project in Flash Professional, you do not have
+> the option of choosing between release and debugging version. The compiled SWF
+> file is a release version by default.

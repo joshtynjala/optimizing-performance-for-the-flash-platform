@@ -18,7 +18,9 @@ is helpful on devices with limited resources, such as mobile devices.
 GPU mode is set automatically when running content on mobile devices, for the
 best possible performance. Although `wmode` no longer must be set to `gpu` to
 get GPU rendering, setting `wmode` to `opaque` or `transparent` disables GPU
-acceleration. Note: Flash Player on the desktop still uses the CPU to do
-software rendering. Software rendering is used because drivers vary widely on
-the desktop, and drivers can accentuate rendering differences. There can also be
-rendering differences between the desktop and some mobile devices.
+acceleration.
+
+> **Note:** Flash Player on the desktop still uses the CPU to do software
+> rendering. Software rendering is used because drivers vary widely on the
+> desktop, and drivers can accentuate rendering differences. There can also be
+> rendering differences between the desktop and some mobile devices.

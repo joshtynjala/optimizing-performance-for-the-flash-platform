@@ -1,7 +1,8 @@
 # Working with pixels
 
-![](../img/tip_help.png) Paint pixels using the `setVector()` method. When
-painting pixels, some simple optimizations can be made just by using the
+> ![](../img/tip_help.png) Paint pixels using the `setVector()` method.
+
+When painting pixels, some simple optimizations can be made just by using the
 appropriate methods of the BitmapData class. A fast way to paint pixels is to
 use the `setVector()` method:
 
@@ -63,14 +64,17 @@ BitmapData object, change it, and then unlock it. The Bitmap object is not
 changed until the BitmapData object is unlocked. To improve performance, use
 this method along with the `unlock()` method before and after numerous calls to
 the `setPixel()` or `setPixel32()` method. Calling `lock()` and `unlock()`
-prevents the screen from being updated unnecessarily. Note: When processing
-pixels on a bitmap not on the display list (double-buffering), sometimes this
-technique does not improve performance. If a bitmap object does not reference
-the bitmap buffer, using `lock()` and `unlock()` does not improve performance.
-Flash Player detects that the buffer is not referenced, and the bitmap is not
-rendered onscreen. Methods that iterate over pixels, such as `getPixel()`,
-`getPixel32()`, `setPixel()`, and `setPixel32()`, are likely to be slow,
-especially on mobile devices. If possible, use methods that retrieve all the
-pixels in one call. For reading pixels, use the `getVector()` method, which is
-faster than the `getPixels()` method. Also, remember to use APIs that rely on
-Vector objects, when possible, as they are likely to run faster.
+prevents the screen from being updated unnecessarily.
+
+> **Note:** When processing pixels on a bitmap not on the display list
+> (double-buffering), sometimes this technique does not improve performance. If
+> a bitmap object does not reference the bitmap buffer, using `lock()` and
+> `unlock()` does not improve performance. Flash Player detects that the buffer
+> is not referenced, and the bitmap is not rendered onscreen.
+
+Methods that iterate over pixels, such as `getPixel()`, `getPixel32()`,
+`setPixel()`, and `setPixel32()`, are likely to be slow, especially on mobile
+devices. If possible, use methods that retrieve all the pixels in one call. For
+reading pixels, use the `getVector()` method, which is faster than the
+`getPixels()` method. Also, remember to use APIs that rely on Vector objects,
+when possible, as they are likely to run faster.

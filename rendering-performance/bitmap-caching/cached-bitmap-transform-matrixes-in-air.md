@@ -1,12 +1,14 @@
 # Cached bitmap transform matrixes in AIR
 
-![](../../img/tip_help.png) Set the `cacheAsBitmapMatrix` property when using
-cached bitmaps in mobile AIR apps. In the AIR mobile profile, you can assign a
-Matrix object to the `cacheAsBitmapMatrix` property of a display object. When
-you set this property, you can apply any two-dimensional transformation to the
-object without regenerating the cached bitmap. You can also change the alpha
-property without regenerating the cached bitmap. The `cacheAsBitmap` property
-must also be set to `true` and the object must not have any 3D properties set.
+> ![](../../img/tip_help.png) Set the `cacheAsBitmapMatrix` property when using
+> cached bitmaps in mobile AIR apps.
+
+In the AIR mobile profile, you can assign a Matrix object to the
+`cacheAsBitmapMatrix` property of a display object. When you set this property,
+you can apply any two-dimensional transformation to the object without
+regenerating the cached bitmap. You can also change the alpha property without
+regenerating the cached bitmap. The `cacheAsBitmap` property must also be set to
+`true` and the object must not have any 3D properties set.
 
 Setting the `cacheAsBitmapMatrix` property generates the cached bitmap even if
 the display object is off screen, hidden from view, or has its `visible`

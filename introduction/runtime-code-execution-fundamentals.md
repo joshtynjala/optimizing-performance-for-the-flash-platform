@@ -35,19 +35,22 @@ distinct from the others because it is always dispatched once per frame.
 Once all the events are dispatched, the rendering phase of the frame loop
 begins. At that point the runtime calculates the state of all visible elements
 on the screen and draws them to the screen. Then the process repeats itself,
-like a runner going around a racetrack. Note: For events that include an
-`updateAfterEvent` property, rendering can be forced to occur immediately
-instead of waiting for the rendering phase. However, avoid using
-`updateAfterEvent` if it frequently leads to performance problems. It's easiest
-to imagine that the two phases in the frame loop take equal amounts of time. In
-that case, during half of each frame loop event handlers and application code
-are running, and during the other half, rendering occurs. However, the reality
-is often different. Sometimes application code takes more than half the
-available time in the frame, stretching its time allotment, and reducing the
-allotment available for rendering. In other cases, especially with complex
-visual content such as filters and blend modes, the rendering requires more than
-half the frame time. Because the actual time taken by the phases is flexible,
-the frame loop is commonly known as the "elastic racetrack."
+like a runner going around a racetrack.
+
+> **Note:** For events that include an `updateAfterEvent` property, rendering
+> can be forced to occur immediately instead of waiting for the rendering phase.
+> However, avoid using `updateAfterEvent` if it frequently leads to performance
+> problems.
+
+It's easiest to imagine that the two phases in the frame loop take equal amounts
+of time. In that case, during half of each frame loop event handlers and
+application code are running, and during the other half, rendering occurs.
+However, the reality is often different. Sometimes application code takes more
+than half the available time in the frame, stretching its time allotment, and
+reducing the allotment available for rendering. In other cases, especially with
+complex visual content such as filters and blend modes, the rendering requires
+more than half the frame time. Because the actual time taken by the phases is
+flexible, the frame loop is commonly known as the "elastic racetrack."
 
 If the combined operations of the frame loop (code execution and rendering) take
 too long, the runtime isn't able to maintain the frame rate. The frame expands,

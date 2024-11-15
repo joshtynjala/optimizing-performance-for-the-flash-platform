@@ -1,10 +1,12 @@
 # Event capture and bubbling
 
-![](../img/tip_help.png) Use event capture and bubbling to minimize event
-handlers. The event model in ActionScript 3.0 introduced the concepts of event
-capture and event bubbling. Taking advantage of the bubbling of an event can
-help you to optimize ActionScript code execution time. You can register an event
-handler on one object, instead of multiple objects, to improve performance.
+> ![](../img/tip_help.png) Use event capture and bubbling to minimize event
+> handlers.
+
+The event model in ActionScript 3.0 introduced the concepts of event capture and
+event bubbling. Taking advantage of the bubbling of an event can help you to
+optimize ActionScript code execution time. You can register an event handler on
+one object, instead of multiple objects, to improve performance.
 
 As an example, imagine creating a game in which the user must click apples as
 fast as possible to destroy them. The game removes each apple from the screen

@@ -1,11 +1,13 @@
 # Input output errors
 
-![](../img/tip_help.png) Provide event handlers and error messages for IO
-errors. On a mobile device, the network can be less reliable as on a desktop
-computer connected to high-speed Internet. Accessing external content on mobile
-devices has two constraints: availability and speed. Therefore, make sure that
-assets are lightweight and add handlers for every IO_ERROR event to provide
-feedback to the user.
+> ![](../img/tip_help.png) Provide event handlers and error messages for IO
+> errors.
+
+On a mobile device, the network can be less reliable as on a desktop computer
+connected to high-speed Internet. Accessing external content on mobile devices
+has two constraints: availability and speed. Therefore, make sure that assets
+are lightweight and add handlers for every IO_ERROR event to provide feedback to
+the user.
 
 For example, imagine a user is browsing your website on a mobile device and
 suddenly loses the network connection between two metro stations. A dynamic

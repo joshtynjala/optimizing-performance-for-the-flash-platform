@@ -1,11 +1,12 @@
 # Rendering text objects
 
-![](../img/tip_help.png) Use the bitmap caching feature and the
-`opaqueBackground` property to improve text rendering performance. The Flash
-Text Engine provides some great optimizations. However, numerous classes are
-required to show a single line of text. For this reason, creating an editable
-text field with the TextLine class requires a great deal of memory and many
-lines of ActionScript code. The TextLine class is best used for static and
+> ![](../img/tip_help.png) Use the bitmap caching feature and the
+> `opaqueBackground` property to improve text rendering performance.
+
+The Flash Text Engine provides some great optimizations. However, numerous
+classes are required to show a single line of text. For this reason, creating an
+editable text field with the TextLine class requires a great deal of memory and
+many lines of ActionScript code. The TextLine class is best used for static and
 non-editable text, for which it renders faster and requires less memory.
 
 The bitmap caching feature allows you to cache vector content as bitmaps to

@@ -4,13 +4,14 @@ Enable hardware graphics acceleration in an AIR application by including
 `<renderMode>gpu</renderMode>` in the application descriptor (or use
 `<renderMode>direct</renderMode>` to leverage Stage3D). You cannot change render
 modes at runtime. On desktop computers, using `<renderMode>gpu</renderMode>`
-will fallback to `<renderMode>direct</renderMode>`. Note: In order to leverage
-GPU acceleration of Flash content with AIR for mobile platforms, Adobe
-recommends that you use renderMode="direct" (that is, Stage3D) rather than
-renderMode="gpu". Adobe officially supports and recommends the following Stage3D
-based frameworks: Starling (2D) and Away3D (3D). For more details on Stage3D and
-Starling/Away3D, see
-<https://web.archive.org/web/20140209182418/http://gaming.adobe.com/getstarted/>.
+will fallback to `<renderMode>direct</renderMode>`.
+
+> **Note:** In order to leverage GPU acceleration of Flash content with AIR for
+> mobile platforms, Adobe recommends that you use renderMode="direct" (that is,
+> Stage3D) rather than renderMode="gpu". Adobe officially supports and
+> recommends the following Stage3D based frameworks: Starling (2D) and Away3D
+> (3D). For more details on Stage3D and Starling/Away3D, see
+> <https://web.archive.org/web/20140209182418/http://gaming.adobe.com/getstarted/>.
 
 #### GPU rendering mode limitations
 

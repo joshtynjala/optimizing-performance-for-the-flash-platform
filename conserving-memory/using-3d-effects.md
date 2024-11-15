@@ -1,12 +1,13 @@
 # Using 3D effects
 
-![](../img/tip_help.png) Consider creating 3D effects manually. Flash Player 10
-and AIR 1.5 introduced a 3D engine, which allows you to apply perspective
-transformation on display objects. You can apply these transformations using the
-`rotationX` and `rotationY` properties or with the `drawTriangles()` method of
-the Graphics class. You can also apply depth with the `z` property. Keep in mind
-that each perspective-transformed display object is rasterized as a bitmap and
-therefore requires more memory.
+> ![](../img/tip_help.png) Consider creating 3D effects manually.
+
+Flash Player 10 and AIR 1.5 introduced a 3D engine, which allows you to apply
+perspective transformation on display objects. You can apply these
+transformations using the `rotationX` and `rotationY` properties or with the
+`drawTriangles()` method of the Graphics class. You can also apply depth with
+the `z` property. Keep in mind that each perspective-transformed display object
+is rasterized as a bitmap and therefore requires more memory.
 
 The following figure illustrates the anti-aliasing produced by the rasterization
 when using perspective transformation:

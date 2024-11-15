@@ -1,11 +1,13 @@
 # Asynchronous operations
 
-![](../img/tip_help.png) Favor using asynchronous versions of operations rather
-than synchronous ones, where available. Synchronous operations run as soon as
-your code tells them to, and your code waits for them to complete before moving
-on. Consequently, they run in the application code phase of the frame loop. If a
-synchronous operation takes too long, it stretches the size of the frame loop,
-potentially causing the display to appear to freeze or stutter.
+> ![](../img/tip_help.png) Favor using asynchronous versions of operations
+> rather than synchronous ones, where available.
+
+Synchronous operations run as soon as your code tells them to, and your code
+waits for them to complete before moving on. Consequently, they run in the
+application code phase of the frame loop. If a synchronous operation takes too
+long, it stretches the size of the frame loop, potentially causing the display
+to appear to freeze or stutter.
 
 When your code executes an asynchronous operation, it doesn't necessarily run
 immediately. Your code and other application code in the current execution
