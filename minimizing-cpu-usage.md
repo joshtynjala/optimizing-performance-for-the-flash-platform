@@ -159,21 +159,49 @@ collected, they could still be using CPU-intensive code. For example, they can
 still be using Event.ENTER_FRAME. As a result, it is critical to freeze and
 unfreeze objects properly with the `Event.REMOVED_FROM_STAGE` and
 `Event.ADDED_TO_STAGE` events. The following example shows a movie clip playing
-on stage that interacts with the keyboard: // Listen to keyboard events
-stage.addEventListener(KeyboardEvent.KEY_DOWN, keyIsDown);
-stage.addEventListener(KeyboardEvent.KEY_UP, keyIsUp);   // Create object to
-store key states var keys:Dictionary = new Dictionary(true);   function
-keyIsDown(e:KeyboardEvent):void { // Remember that the key was pressed
-keys[e.keyCode] = true;   if (e.keyCode==Keyboard.LEFT ||
-e.keyCode==Keyboard.RIGHT) { runningBoy.play(); } }   function
-keyIsUp(e:KeyboardEvent):void { // Remember that the key was released
-keys[e.keyCode] = false;   for each (var value:Boolean in keys) if ( value )
-return; runningBoy.stop(); }   runningBoy.addEventListener(Event.ENTER_FRAME,
-handleMovement); runningBoy.stop();   var currentState:Number =
-runningBoy.scaleX; var speed:Number = 15;   function
-handleMovement(e:Event):void { if (keys[Keyboard.RIGHT]) { e.currentTarget.x +=
-speed; e.currentTarget.scaleX = currentState; } else if (keys[Keyboard.LEFT]) {
-e.currentTarget.x -= speed; e.currentTarget.scaleX = -currentState; } }
+on stage that interacts with the keyboard: 
+
+    // Listen to keyboard events
+    stage.addEventListener(KeyboardEvent.KEY_DOWN, keyIsDown);
+    stage.addEventListener(KeyboardEvent.KEY_UP, keyIsUp);   
+    
+    // Create object to store key states 
+    var keys:Dictionary = new Dictionary(true);   
+    
+    function keyIsDown(e:KeyboardEvent):void 
+    { 
+        // Remember that the key was pressed
+        keys[e.keyCode] = true;   
+        if (e.keyCode==Keyboard.LEFT || e.keyCode==Keyboard.RIGHT) 
+        { 
+            runningBoy.play(); 
+        } 
+    }   
+    
+    function keyIsUp(e:KeyboardEvent):void 
+    { 
+        // Remember that the key was released
+        keys[e.keyCode] = false;   
+        for each (var value:Boolean in keys) 
+        if ( value ) return; 
+        runningBoy.stop(); 
+    }
+
+    runningBoy.addEventListener(Event.ENTER_FRAME, handleMovement); 
+    runningBoy.stop();   
+    var currentState:Number = runningBoy.scaleX; 
+    var speed:Number = 15;
+    function handleMovement(e:Event):void 
+    { 
+        if (keys[Keyboard.RIGHT]) 
+        { 
+            e.currentTarget.x += speed; e.currentTarget.scaleX = currentState; 
+        } 
+        else if (keys[Keyboard.LEFT]) {
+            e.currentTarget.x -= speed; e.currentTarget.scaleX = -currentState; 
+        } 
+    }  
+
 ![](./img/ou_object_activate_deactivate_popup.png) Movie clip that interacts
 with keyboard
 
@@ -186,12 +214,12 @@ list:
 
     function showIt (e:MouseEvent):void
     {
-    addChild (runningBoy);
+        addChild (runningBoy);
     }
 
     function removeIt(e:MouseEvent):void
     {
-    if (contains(runningBoy)) removeChild(runningBoy);
+        if (contains(runningBoy)) removeChild(runningBoy);
     }
 
 Even when removed from the display list, the movie clip still dispatches the
@@ -311,14 +339,14 @@ another tab or puts the application into the background:
      
     function onActivate ( e:Event ):void
     {
-    // restore original frame rate
-    stage.frameRate = originalFrameRate;
+        // restore original frame rate
+        stage.frameRate = originalFrameRate;
     }
      
     function onDeactivate ( e:Event ):void
     {
-    // set frame rate to 0
-    stage.frameRate = standbyFrameRate;
+        // set frame rate to 0
+        stage.frameRate = standbyFrameRate;
     }
 
 When the application gains focus again, the frame rate is reset to its original
@@ -348,8 +376,8 @@ properties:
      
     for ( var i:int = 0; i< MAX_NUM; i++ )
     {
-    // Add InteractiveObject to the container
-    container.addChild( new Sprite() );
+        // Add InteractiveObject to the container
+        container.addChild( new Sprite() );
     }
      
     // Disable any mouse interaction on all the children
@@ -404,9 +432,9 @@ timer dispatches an event, if needed. The following code illustrates the idea:
      
     function updateControls( e:TimerEvent ):void
     {
-    // Update controls here
-    // Force the controls to be updated on screen
-    e.updateAfterEvent();
+        // Update controls here
+        // Force the controls to be updated on screen
+        e.updateAfterEvent();
     }
 
 Calling the `updateAfterEvent()` method does not modify the frame rate. It just
@@ -455,14 +483,14 @@ alternatives:
        
       function timerHandler(event:TimerEvent):void
       {
-      // Do things that happen every 100 ms
-
-      if (!offCycle)
-      {
-          // Do things that happen every 200 ms
-      }
-
-      offCycle = !offCycle;
+          // Do things that happen every 100 ms
+    
+          if (!offCycle)
+          {
+              // Do things that happen every 200 ms
+          }
+    
+          offCycle = !offCycle;
       }
 
 ![](./img/tip_help.png) Stop Timer objects when not in use. If a Timer object's
